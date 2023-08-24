@@ -25,22 +25,23 @@ export default function BooksFragment() {
 
     const books = selection
         .map(id => database.books[id])
-        .sort((a,b) => a.name.localeCompare(b.name));
+        .map(book => ({ book, text: `${book.authors.length > 0 && (book.authors.map(author => author.short).join(", ") + ": ")}${book.name}`}))
+        .sort((a,b) => a.text.localeCompare(b.text));
 
     return (
         <>
             <AnimatedList dense>
                 {
                     books.map(book => ({
-                        key: book.id,
+                        key: book.book.id,
                         component: (
                             <ListItem
                             >
-                                <ListItemText primary={`${book.authors.length > 0 && (book.authors.map(author => author.short).join(", ") + ": ")}${book.name}`}/>
+                                <ListItemText primary={book.text}/>
                                 <ListItemSecondaryAction>
                                     <IconButton
                                         size="small"
-                                        onClick={() => selection.remove(book)}
+                                        onClick={() => selection.remove(book.book)}
                                     >
                                         <Clear fontSize="small"/>
                                     </IconButton>
