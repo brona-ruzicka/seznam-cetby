@@ -313,7 +313,7 @@ const CustomListItemContent = (props: {
                             (author) => author && author + ": "
                         )(
                             props.book.authors?.map(author => author.short).join(", ") || undefined
-                            )
+                        )
                     }
                     {props.book.name}
                 </>)
@@ -321,10 +321,22 @@ const CustomListItemContent = (props: {
             secondary={
                 (<>
                     {
-                        isSmallScreen ? (
-                            props.book.categories?.map(category => category.short).join(" • ") || undefined
-                        ) : (
+                        !isSmallScreen && (
                             props.book.authors?.map(author => author.name).join(", ") || undefined
+                        )
+                    }
+                    {
+                        props.book.note != null && (
+                            <>
+                                { !isSmallScreen && (<br/>) }
+                                <i>{ props.book.note }</i>
+                                { isSmallScreen && (<br/>) }
+                            </>
+                        )
+                    }
+                    {
+                        isSmallScreen && (
+                            props.book.categories?.map(category => category.short).join(" • ") || undefined
                         )
                     }
                 </>)
