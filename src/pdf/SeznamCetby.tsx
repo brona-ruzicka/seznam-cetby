@@ -87,7 +87,7 @@ export default function SeznamCetby(props: {
                         <Text style={{ fontSize: 16, fontWeight: "bold", paddingRight: 10 }}>{"Povinná"}</Text>
                     </View> */}
                     <View style={{
-                        flex: 2,
+                        flex: 3, // flex: 2,
                     }}>
                         <Text style={{ fontSize: 10, fontWeight: "normal", }}>{"Jméno studenta"}</Text>
                         <Padder padding={3} />
