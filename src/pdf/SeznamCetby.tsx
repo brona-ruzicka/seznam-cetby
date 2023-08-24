@@ -70,7 +70,7 @@ export default function SeznamCetby(props: {
                     <Text style={{
                         fontSize: 12,
                     }}>
-                        {`Seznam literárních děl k ústní části maturitní zkoušky ${props.yearOfExam}\nčeský jazyk`}
+                        {`Seznam literárních děl k ústní části maturitní zkoušky z českého jazyka`}
                     </Text>
                 </View>
                 <Padder padding={16} />
@@ -79,15 +79,8 @@ export default function SeznamCetby(props: {
                     flexDirection: "row",
                     textAlign: "left",
                 }}>
-                    {/* <View style={{
-                        flex: 1,
-                    }}>
-                        <Text style={{ fontSize: 10, fontWeight: "normal", }}>{"Typ zkoušky"}</Text>
-                        <Padder padding={3} />
-                        <Text style={{ fontSize: 16, fontWeight: "bold", paddingRight: 10 }}>{"Povinná"}</Text>
-                    </View> */}
                     <View style={{
-                        flex: 3, // flex: 2,
+                        flex: 2,
                     }}>
                         <Text style={{ fontSize: 10, fontWeight: "normal", }}>{"Jméno studenta"}</Text>
                         <Padder padding={3} />
@@ -99,6 +92,13 @@ export default function SeznamCetby(props: {
                         <Text style={{ fontSize: 10, fontWeight: "normal", }}>{"Třída"}</Text>
                         <Padder padding={3} />
                         <Text style={{ fontSize: 16, fontWeight: "bold", paddingRight: 10 }}>{props.personClass}</Text>
+                    </View>
+                    <View style={{
+                        flex: 1,
+                    }}>
+                        <Text style={{ fontSize: 10, fontWeight: "normal", }}>{"Rok maturity"}</Text>
+                        <Padder padding={3} />
+                        <Text style={{ fontSize: 16, fontWeight: "bold", paddingRight: 10 }}>{props.yearOfExam}</Text>
                     </View>
                 </View>
                 <Padder padding={16} />
