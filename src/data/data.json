@@ -1,0 +1,2086 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Bible: Starý zákon",
+      "note": "5 knih Mojžíšových",
+      "published": 1,
+      "authors": null,
+      "categories": [ 1, 6 ]
+    },
+    {
+      "id": 2,
+      "name": "Dekameron",
+      "note": null,
+      "published": 1353,
+      "authors": [ 1 ],
+      "categories": [ 1, 6 ]
+    },
+    {
+      "id": 146,
+      "name": "Božská komedie",
+      "note": null,
+      "published": 1321,
+      "authors": [ 2 ],
+      "categories": [ 2, 6 ]
+    },
+    {
+      "id": 147,
+      "name": "Robinson Crusoe",
+      "note": null,
+      "published": 1719,
+      "authors": [ 3 ],
+      "categories": [ 1, 6 ]
+    },
+    {
+      "id": 149,
+      "name": "Utrpení mladého Werthera",
+      "note": null,
+      "published": 1774,
+      "authors": [ 4 ],
+      "categories": [ 1, 6 ]
+    },
+    {
+      "id": 148,
+      "name": "Sluha dvou pánů",
+      "note": null,
+      "published": 1746,
+      "authors": [ 5 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 6,
+      "name": "Labyrint světa a ráj srdce",
+      "note": null,
+      "published": 1631,
+      "authors": [ 6 ],
+      "categories": [ 1, 6 ]
+    },
+    {
+      "id": 97,
+      "name": "Tartuffe",
+      "note": null,
+      "published": 1664,
+      "authors": [ 7 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 5,
+      "name": "Lakomec",
+      "note": null,
+      "published": 1668,
+      "authors": [ 7 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 4,
+      "name": "Romeo a Julie",
+      "note": null,
+      "published": 1597,
+      "authors": [ 9 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 49,
+      "name": "Hamlet",
+      "note": null,
+      "published": 1602,
+      "authors": [ 9 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 50,
+      "name": "Zkrocení zlé ženy",
+      "note": null,
+      "published": 1595,
+      "authors": [ 9 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 96,
+      "name": "Macbeth",
+      "note": null,
+      "published": 1623,
+      "authors": [ 9 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 134,
+      "name": "Othello, mouřenín benátský",
+      "note": null,
+      "published": 1622,
+      "authors": [ 9 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 51,
+      "name": "Antigona",
+      "note": null,
+      "published": -441,
+      "authors": [ 10 ],
+      "categories": [ 3, 6 ]
+    },
+    {
+      "id": 150,
+      "name": "Podivuhodný případ dr. Jekylla a pana Hyda",
+      "note": null,
+      "published": 1886,
+      "authors": [ 11 ],
+      "categories": [ 1, 6 ]
+    },
+    {
+      "id": 3,
+      "name": "Závěť",
+      "note": null,
+      "published": 1461,
+      "authors": [ 12 ],
+      "categories": [ 2, 6 ]
+    },
+    {
+      "id": 60,
+      "name": "Svatý Xaverius",
+      "note": null,
+      "published": 1873,
+      "authors": [ 13 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 52,
+      "name": "Pýcha a předsudek",
+      "note": null,
+      "published": 1813,
+      "authors": [ 14 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 156,
+      "name": "Rozum a cit",
+      "note": null,
+      "published": 1811,
+      "authors": [ 14 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 9,
+      "name": "Otec Goriot",
+      "note": null,
+      "published": 1835,
+      "authors": [ 15 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 98,
+      "name": "Lesk a bída kurtizán",
+      "note": null,
+      "published": 1838,
+      "authors": [ 15 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 17,
+      "name": "Tyrolské elegie",
+      "note": null,
+      "published": 1861,
+      "authors": [ 16 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 61,
+      "name": "Křest svatého Vladimíra",
+      "note": null,
+      "published": 1877,
+      "authors": [ 16 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 136,
+      "name": "Král Lávra",
+      "note": null,
+      "published": 1870,
+      "authors": [ 16 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 53,
+      "name": "Jana Eyrová",
+      "note": null,
+      "published": 1847,
+      "authors": [ 17 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 54,
+      "name": "Na větrné hůrce",
+      "note": null,
+      "published": 1847,
+      "authors": [ 17 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 12,
+      "name": "Oliver Twist",
+      "note": null,
+      "published": 1838,
+      "authors": [ 18 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 104,
+      "name": "Zločin a trest",
+      "note": null,
+      "published": 1866,
+      "authors": [ 19 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 102,
+      "name": "Hrabě Monte Christo",
+      "note": null,
+      "published": 1845,
+      "authors": [ 20 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 22,
+      "name": "Krysař",
+      "note": null,
+      "published": 1915,
+      "authors": [ 21 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 18,
+      "name": "Kytice",
+      "note": null,
+      "published": 1853,
+      "authors": [ 22 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 55,
+      "name": "Paní Bovaryová",
+      "note": null,
+      "published": 1857,
+      "authors": [ 23 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 11,
+      "name": "Revizor",
+      "note": null,
+      "published": 1836,
+      "authors": [ 24 ],
+      "categories": [ 3, 7 ]
+    },
+    {
+      "id": 101,
+      "name": "Mrtvé duše",
+      "note": null,
+      "published": 1842,
+      "authors": [ 24 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 8,
+      "name": "Chrám Matky Boží v Paříži",
+      "note": null,
+      "published": 1831,
+      "authors": [ 25 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 56,
+      "name": "Bídníci",
+      "note": null,
+      "published": 1862,
+      "authors": [ 25 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 108,
+      "name": "Proti všem",
+      "note": null,
+      "published": 1893,
+      "authors": [ 26 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 128,
+      "name": "Démon",
+      "note": null,
+      "published": 1856,
+      "authors": [ 27 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 151,
+      "name": "Tulák po hvězdách",
+      "note": null,
+      "published": 1915,
+      "authors": [ 28 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 15,
+      "name": "Máj",
+      "note": null,
+      "published": 1836,
+      "authors": [ 29 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 57,
+      "name": "Kulička",
+      "note": null,
+      "published": 1880,
+      "authors": [ 30 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 106,
+      "name": "Miláček",
+      "note": null,
+      "published": 1885,
+      "authors": [ 30 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 21,
+      "name": "Maryša",
+      "note": null,
+      "published": 1894,
+      "authors": [ 31 ],
+      "categories": [ 3, 7 ]
+    },
+    {
+      "id": 19,
+      "name": "Babička",
+      "note": null,
+      "published": 1855,
+      "authors": [ 32 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 20,
+      "name": "Povídky malostranské",
+      "note": null,
+      "published": 1878,
+      "authors": [ 33 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 62,
+      "name": "Balady a romance",
+      "note": null,
+      "published": 1883,
+      "authors": [ 33 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 13,
+      "name": "Povídky",
+      "note": "Jáma a kyvadlo, Zlatý skarabeus, Zánik domu Usherů, Černý kocour, Vraždy v ulici Morgue",
+      "published": 1850,
+      "authors": [ 34 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 135,
+      "name": "Havran",
+      "note": null,
+      "published": 1845,
+      "authors": [ 34 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 10,
+      "name": "Evžen Oněgin",
+      "note": null,
+      "published": 1833,
+      "authors": [ 35 ],
+      "categories": [ 2, 7 ]
+    },
+    {
+      "id": 103,
+      "name": "Ivanhoe",
+      "note": null,
+      "published": 1820,
+      "authors": [ 36 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 59,
+      "name": "Quo vadis",
+      "note": null,
+      "published": 1896,
+      "authors": [ 37 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 7,
+      "name": "Červený a černý",
+      "note": null,
+      "published": 1830,
+      "authors": [ 38 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 107,
+      "name": "Naši furianti",
+      "note": null,
+      "published": 1887,
+      "authors": [ 39 ],
+      "categories": [ 3, 7 ]
+    },
+    {
+      "id": 105,
+      "name": "Anna Kareninová",
+      "note": null,
+      "published": 1877,
+      "authors": [ 40 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 99,
+      "name": "Dobrodružství Toma Sawyera",
+      "note": null,
+      "published": 1876,
+      "authors": [ 41 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 16,
+      "name": "Strakonický dudák",
+      "note": null,
+      "published": 1847,
+      "authors": [ 42 ],
+      "categories": [ 3, 7 ]
+    },
+    {
+      "id": 100,
+      "name": "Obraz Doriana Graye",
+      "note": null,
+      "published": 1890,
+      "authors": [ 43 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 14,
+      "name": "Zabiják",
+      "note": null,
+      "published": 1877,
+      "authors": [ 44 ],
+      "categories": [ 1, 7 ]
+    },
+    {
+      "id": 23,
+      "name": "Alkoholy",
+      "note": null,
+      "published": 1913,
+      "authors": [ 45 ],
+      "categories": [ 2, 8 ]
+    },
+    {
+      "id": 144,
+      "name": "451 stupňů Fahrenheita",
+      "note": null,
+      "published": 1953,
+      "authors": [ 46 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 63,
+      "name": "Šunkový nářez",
+      "note": null,
+      "published": 1982,
+      "authors": [ 47 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 34,
+      "name": "Cizinec",
+      "note": null,
+      "published": 1942,
+      "authors": [ 48 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 109,
+      "name": "Devět miliard božích jmen",
+      "note": null,
+      "published": 1953,
+      "authors": [ 49 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 132,
+      "name": "Král Krysa",
+      "note": null,
+      "published": 1962,
+      "authors": [ 50 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 130,
+      "name": "Malý princ",
+      "note": null,
+      "published": 1943,
+      "authors": [ 51 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 140,
+      "name": "Pes baskervillský",
+      "note": null,
+      "published": 1902,
+      "authors": [ 52 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 113,
+      "name": "Jméno růže",
+      "note": null,
+      "published": 1980,
+      "authors": [ 53 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 112,
+      "name": "Velký Gatsby",
+      "note": null,
+      "published": 1925,
+      "authors": [ 54 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 141,
+      "name": "Den pro Šakala",
+      "note": null,
+      "published": 1971,
+      "authors": [ 55 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 64,
+      "name": "Milion malých střípků",
+      "note": null,
+      "published": 2004,
+      "authors": [ 56 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 129,
+      "name": "Kvílení",
+      "note": null,
+      "published": 1956,
+      "authors": [ 57 ],
+      "categories": [ 2, 8 ]
+    },
+    {
+      "id": 65,
+      "name": "Pán much",
+      "note": null,
+      "published": 1954,
+      "authors": [ 58 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 66,
+      "name": "Plechový bubínek",
+      "note": null,
+      "published": 1959,
+      "authors": [ 59 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 131,
+      "name": "Hlava XXII",
+      "note": null,
+      "published": 1961,
+      "authors": [ 60 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 24,
+      "name": "Sbohem, armádo",
+      "note": null,
+      "published": 1929,
+      "authors": [ 61 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 25,
+      "name": "Stařec a moře",
+      "note": null,
+      "published": 1952,
+      "authors": [ 61 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 67,
+      "name": "Komu zvoní hrana",
+      "note": null,
+      "published": 1940,
+      "authors": [ 61 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 145,
+      "name": "My děti za stanice ZOO",
+      "note": null,
+      "published": 1978,
+      "authors": [ 62 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 142,
+      "name": "Vražda v Orient-expresu",
+      "note": null,
+      "published": 1934,
+      "authors": [ 63 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 68,
+      "name": "Svět podle Garpa",
+      "note": null,
+      "published": 1978,
+      "authors": [ 64 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 143,
+      "name": "Pravidla moštárny",
+      "note": null,
+      "published": 1985,
+      "authors": [ 64 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 120,
+      "name": "Proces",
+      "note": null,
+      "published": 1925,
+      "authors": [ 65 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 28,
+      "name": "Proměna",
+      "note": null,
+      "published": 1915,
+      "authors": [ 65 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 32,
+      "name": "Na cestě",
+      "note": null,
+      "published": 1957,
+      "authors": [ 66 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 69,
+      "name": "Vyhoďme ho z kola ven",
+      "note": null,
+      "published": 1962,
+      "authors": [ 67 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 70,
+      "name": "Babbitt",
+      "note": null,
+      "published": 1922,
+      "authors": [ 68 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 114,
+      "name": "Hlavní třída",
+      "note": null,
+      "published": 1920,
+      "authors": [ 68 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 31,
+      "name": "Horalka",
+      "note": null,
+      "published": 1957,
+      "authors": [ 69 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 30,
+      "name": "1984",
+      "note": null,
+      "published": 1949,
+      "authors": [ 70 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 71,
+      "name": "Farma zvířat",
+      "note": null,
+      "published": 1945,
+      "authors": [ 70 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 155,
+      "name": "Kmotr",
+      "note": null,
+      "published": 1969,
+      "authors": [ 71 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 29,
+      "name": "Na západní frontě klid",
+      "note": null,
+      "published": 1929,
+      "authors": [ 72 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 111,
+      "name": "Tři kamarádi",
+      "note": null,
+      "published": 1936,
+      "authors": [ 72 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 27,
+      "name": "Petr a Lucie",
+      "note": null,
+      "published": 1920,
+      "authors": [ 73 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 72,
+      "name": "Kdo chytá v žitě",
+      "note": null,
+      "published": 1951,
+      "authors": [ 74 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 133,
+      "name": "Pygmalion",
+      "note": null,
+      "published": 1912,
+      "authors": [ 75 ],
+      "categories": [ 3, 8 ]
+    },
+    {
+      "id": 33,
+      "name": "Jeden den Ivana Děnisoviče",
+      "note": null,
+      "published": 1962,
+      "authors": [ 76 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 26,
+      "name": "O myších a lidech",
+      "note": null,
+      "published": 1937,
+      "authors": [ 77 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 73,
+      "name": "Na východ od ráje",
+      "note": null,
+      "published": 1952,
+      "authors": [ 77 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 115,
+      "name": "Hrozny hněvu",
+      "note": null,
+      "published": 1939,
+      "authors": [ 77 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 74,
+      "name": "Piknik u cesty",
+      "note": null,
+      "published": 1972,
+      "authors": [ 78 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 75,
+      "name": "Sophiina volba",
+      "note": null,
+      "published": 1979,
+      "authors": [ 79 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 110,
+      "name": "Pán prstenů",
+      "note": null,
+      "published": 1954,
+      "authors": [ 80 ],
+      "categories": [ 1, 8 ]
+    },
+    {
+      "id": 76,
+      "name": "Cirkus Humberto",
+      "note": null,
+      "published": 1941,
+      "authors": [ 81 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 35,
+      "name": "Povídky z jedné kapsy",
+      "note": null,
+      "published": 1929,
+      "authors": [ 82 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 77,
+      "name": "Bílá nemoc",
+      "note": null,
+      "published": 1937,
+      "authors": [ 82 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 78,
+      "name": "R.U.R.",
+      "note": null,
+      "published": 1920,
+      "authors": [ 82 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 79,
+      "name": "Válka s mloky",
+      "note": null,
+      "published": 1935,
+      "authors": [ 82 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 118,
+      "name": "Matka",
+      "note": null,
+      "published": 1938,
+      "authors": [ 82 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 126,
+      "name": "Krakatit",
+      "note": null,
+      "published": 1924,
+      "authors": [ 82 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 80,
+      "name": "Hrdý Budžes",
+      "note": null,
+      "published": 1998,
+      "authors": [ 83 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 125,
+      "name": "Němá barikáda",
+      "note": null,
+      "published": 1946,
+      "authors": [ 84 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 121,
+      "name": "Reportáž psaná na oprátce",
+      "note": null,
+      "published": 1945,
+      "authors": [ 85 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 41,
+      "name": "Pan Theodor Mundstock",
+      "note": null,
+      "published": 1963,
+      "authors": [ 86 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 42,
+      "name": "Spalovač mrtvol",
+      "note": null,
+      "published": 1967,
+      "authors": [ 86 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 36,
+      "name": "Osudy dobrého vojáka Švejka za světové války",
+      "note": null,
+      "published": 1921,
+      "authors": [ 87 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 152,
+      "name": "Audience",
+      "note": null,
+      "published": 1975,
+      "authors": [ 88 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 81,
+      "name": "Neviditelný",
+      "note": null,
+      "published": 1937,
+      "authors": [ 89 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 82,
+      "name": "Petrolejové lampy",
+      "note": null,
+      "published": 1944,
+      "authors": [ 89 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 44,
+      "name": "Ostře sledované vlaky",
+      "note": null,
+      "published": 1965,
+      "authors": [ 90 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 83,
+      "name": "Postřižiny",
+      "note": null,
+      "published": 1974,
+      "authors": [ 90 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 84,
+      "name": "Obsluhoval jsem anglického krále",
+      "note": null,
+      "published": 1971,
+      "authors": [ 90 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 85,
+      "name": "Blues pro bláznivou holku",
+      "note": null,
+      "published": 1990,
+      "authors": [ 91 ],
+      "categories": [ 2, 9 ]
+    },
+    {
+      "id": 122,
+      "name": "Saturnin",
+      "note": null,
+      "published": 1942,
+      "authors": [ 92 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 86,
+      "name": "Memento",
+      "note": null,
+      "published": 1986,
+      "authors": [ 93 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 87,
+      "name": "Kladivo na čarodějnice",
+      "note": null,
+      "published": 1963,
+      "authors": [ 94 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 88,
+      "name": "Největší z pierotů",
+      "note": null,
+      "published": 1939,
+      "authors": [ 95 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 89,
+      "name": "Kníška Karla Kryla",
+      "note": null,
+      "published": 1990,
+      "authors": [ 96 ],
+      "categories": [ 2, 9 ]
+    },
+    {
+      "id": 43,
+      "name": "Žert",
+      "note": null,
+      "published": 1967,
+      "authors": [ 97 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 139,
+      "name": "Směšné lásky",
+      "note": null,
+      "published": 1967,
+      "authors": [ 97 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 154,
+      "name": "Nesnesitelná lehkost bytí",
+      "note": null,
+      "published": 1984,
+      "authors": [ 97 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 45,
+      "name": "Modlitba pro Kateřinu Horovitzovou",
+      "note": null,
+      "published": 1964,
+      "authors": [ 98 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 123,
+      "name": "Dita Saxová",
+      "note": null,
+      "published": 1962,
+      "authors": [ 98 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 157,
+      "name": "Hana",
+      "note": null,
+      "published": 2017,
+      "authors": [ 99 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 37,
+      "name": "Edison",
+      "note": null,
+      "published": 1928,
+      "authors": [ 100 ],
+      "categories": [ 2, 9 ]
+    },
+    {
+      "id": 90,
+      "name": "Manon Lescaut",
+      "note": null,
+      "published": 1940,
+      "authors": [ 100 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 116,
+      "name": "Golet v údolí",
+      "note": null,
+      "published": 1937,
+      "authors": [ 101 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 91,
+      "name": "Romeo, Julie a tma",
+      "note": null,
+      "published": 1958,
+      "authors": [ 102 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 117,
+      "name": "Když v ráji pršelo",
+      "note": null,
+      "published": 1972,
+      "authors": [ 102 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 46,
+      "name": "Smrt krásných srnců",
+      "note": null,
+      "published": 1971,
+      "authors": [ 103 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 39,
+      "name": "Michelup a motocykl",
+      "note": null,
+      "published": 1935,
+      "authors": [ 104 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 124,
+      "name": "Muži v ofsajdu",
+      "note": null,
+      "published": 1931,
+      "authors": [ 104 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 127,
+      "name": "Bylo nás pět",
+      "note": null,
+      "published": 1946,
+      "authors": [ 104 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 92,
+      "name": "Černé světlo",
+      "note": null,
+      "published": 1940,
+      "authors": [ 105 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 47,
+      "name": "Záskok",
+      "note": null,
+      "published": 1994,
+      "authors": [ 106 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 93,
+      "name": "Vyšetřování ztráty třídní knihy",
+      "note": null,
+      "published": 1967,
+      "authors": [ 106 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 119,
+      "name": "Hovno hoří",
+      "note": null,
+      "published": 1994,
+      "authors": [ 107 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 40,
+      "name": "Zbabělci",
+      "note": null,
+      "published": 1958,
+      "authors": [ 108 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 153,
+      "name": "Tankový prapor",
+      "note": null,
+      "published": 1971,
+      "authors": [ 108 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 94,
+      "name": "Markéta Lazarová",
+      "note": null,
+      "published": 1931,
+      "authors": [ 109 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 95,
+      "name": "Rozmarné léto",
+      "note": null,
+      "published": 1926,
+      "authors": [ 109 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 48,
+      "name": "Báječná léta pod psa",
+      "note": null,
+      "published": 1992,
+      "authors": [ 110 ],
+      "categories": [ 1, 9 ]
+    },
+    {
+      "id": 137,
+      "name": "Těžká Barbora",
+      "note": null,
+      "published": 1937,
+      "authors": [ 111 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 38,
+      "name": "Ceasar",
+      "note": null,
+      "published": 1932,
+      "authors": [ 111 ],
+      "categories": [ 3, 9 ]
+    },
+    {
+      "id": 138,
+      "name": "Dům o tisíci patrech",
+      "note": null,
+      "published": 1929,
+      "authors": [ 112 ],
+      "categories": [ 1, 9 ]
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "short": "Boccaccio",
+      "name": "Giovanni Boccaccio",
+      "aliases": null,
+      "born": 1313
+    },
+    {
+      "id": 2,
+      "short": "Dante",
+      "name": "Dante Alighieri",
+      "aliases": null,
+      "born": 1265
+    },
+    {
+      "id": 3,
+      "short": "Defoe",
+      "name": "Daniel Defoe",
+      "aliases": null,
+      "born": 1660
+    },
+    {
+      "id": 4,
+      "short": "Goethe",
+      "name": "Johann Wolfgang von Goethe",
+      "aliases": null,
+      "born": 1749
+    },
+    {
+      "id": 5,
+      "short": "Goldoni",
+      "name": "Carlo Goldoni",
+      "aliases": null,
+      "born": 1707
+    },
+    {
+      "id": 6,
+      "short": "Komenský",
+      "name": "Jan Amos Komenský",
+      "aliases": null,
+      "born": 1592
+    },
+    {
+      "id": 7,
+      "short": null,
+      "name": "Molière",
+      "aliases": null,
+      "born": 1622
+    },
+    {
+      "id": 9,
+      "short": "Shakespeare",
+      "name": "William Shakespeare",
+      "aliases": null,
+      "born": 1564
+    },
+    {
+      "id": 10,
+      "short": "Sofokles",
+      "name": "Sofokles",
+      "aliases": null,
+      "born": -497
+    },
+    {
+      "id": 11,
+      "short": "Stevenson",
+      "name": "Robert Louis Stevenson",
+      "aliases": null,
+      "born": 1850
+    },
+    {
+      "id": 12,
+      "short": "Villon",
+      "name": "François Villon",
+      "aliases": null,
+      "born": 1429
+    },
+    {
+      "id": 13,
+      "short": "Arbes",
+      "name": "Jakub Arbes",
+      "aliases": null,
+      "born": 1840
+    },
+    {
+      "id": 14,
+      "short": "Austenová",
+      "name": "Jane Austen",
+      "aliases": null,
+      "born": 1775
+    },
+    {
+      "id": 15,
+      "short": "Balzac",
+      "name": "Honoré de Balzac",
+      "aliases": null,
+      "born": 1799
+    },
+    {
+      "id": 16,
+      "short": "Borovský",
+      "name": "Karel Havlíček Borovský",
+      "aliases": null,
+      "born": 1821
+    },
+    {
+      "id": 17,
+      "short": "Bronteová",
+      "name": "Charlotte Brontë",
+      "aliases": null,
+      "born": 1816
+    },
+    {
+      "id": 18,
+      "short": "Dickens",
+      "name": "Charles Dickens",
+      "aliases": null,
+      "born": 1812
+    },
+    {
+      "id": 19,
+      "short": "Dostojevský",
+      "name": "Fjodor Michajlovič Dostojevskij",
+      "aliases": null,
+      "born": 1821
+    },
+    {
+      "id": 20,
+      "short": "Dumas",
+      "name": "Alexandre Dumas",
+      "aliases": null,
+      "born": 1802
+    },
+    {
+      "id": 21,
+      "short": "Dyk",
+      "name": "Viktor Dyk",
+      "aliases": null,
+      "born": 1877
+    },
+    {
+      "id": 22,
+      "short": "Erben",
+      "name": "Karel Jaromír Erben",
+      "aliases": null,
+      "born": 1811
+    },
+    {
+      "id": 23,
+      "short": "Flaubert",
+      "name": "Gustave Flaubert",
+      "aliases": null,
+      "born": 1821
+    },
+    {
+      "id": 24,
+      "short": "Gogol",
+      "name": "Nikolaj Vasiljevič Gogol",
+      "aliases": null,
+      "born": 1809
+    },
+    {
+      "id": 25,
+      "short": "Hugo",
+      "name": "Victor Hugo",
+      "aliases": null,
+      "born": 1802
+    },
+    {
+      "id": 26,
+      "short": "Jirásek",
+      "name": "Alois Jirásek",
+      "aliases": null,
+      "born": 1851
+    },
+    {
+      "id": 27,
+      "short": "Lermontov",
+      "name": "Michail Jurjevič Lermontov",
+      "aliases": null,
+      "born": 1814
+    },
+    {
+      "id": 28,
+      "short": "London",
+      "name": "Jack London",
+      "aliases": null,
+      "born": 1876
+    },
+    {
+      "id": 29,
+      "short": "Mácha",
+      "name": "Karel Hynek Mácha",
+      "aliases": null,
+      "born": 1810
+    },
+    {
+      "id": 30,
+      "short": "Maupassant",
+      "name": "Guy de Maupassant",
+      "aliases": null,
+      "born": 1850
+    },
+    {
+      "id": 31,
+      "short": "Mrštíkové",
+      "name": "Alois Mrštík, Vilém Mrštík",
+      "aliases": null,
+      "born": 1861
+    },
+    {
+      "id": 32,
+      "short": "Němcová",
+      "name": "Božena Němcová",
+      "aliases": null,
+      "born": 1820
+    },
+    {
+      "id": 33,
+      "short": "Neruda",
+      "name": "Jan Neruda",
+      "aliases": null,
+      "born": 1834
+    },
+    {
+      "id": 34,
+      "short": "Poe",
+      "name": "Edgar Allan Poe",
+      "aliases": null,
+      "born": 1809
+    },
+    {
+      "id": 35,
+      "short": "Puškin",
+      "name": "Alexandr Sergejevič Puškin",
+      "aliases": null,
+      "born": 1799
+    },
+    {
+      "id": 36,
+      "short": "Scott",
+      "name": "Walter Scott",
+      "aliases": null,
+      "born": 1771
+    },
+    {
+      "id": 37,
+      "short": "Sienkiewicz",
+      "name": "Henryk Sienkiewicz",
+      "aliases": null,
+      "born": 1846
+    },
+    {
+      "id": 38,
+      "short": null,
+      "name": "Stendhal",
+      "aliases": null,
+      "born": 1783
+    },
+    {
+      "id": 39,
+      "short": "Stroupežnický",
+      "name": "Ladislav Stroupežnický",
+      "aliases": null,
+      "born": 1850
+    },
+    {
+      "id": 40,
+      "short": "Tolstoj",
+      "name": "Lev Nikolajevič Tolstoj",
+      "aliases": null,
+      "born": 1828
+    },
+    {
+      "id": 41,
+      "short": "Twain",
+      "name": "Mark Twain",
+      "aliases": null,
+      "born": 1835
+    },
+    {
+      "id": 42,
+      "short": "Tyl",
+      "name": "Josef Kajetán Tyl",
+      "aliases": null,
+      "born": 1808
+    },
+    {
+      "id": 43,
+      "short": "Wilde",
+      "name": "Oscar Wilde",
+      "aliases": null,
+      "born": 1854
+    },
+    {
+      "id": 44,
+      "short": "Zola",
+      "name": "Émile Zola",
+      "aliases": null,
+      "born": 1840
+    },
+    {
+      "id": 45,
+      "short": "Apollinaire",
+      "name": "Guillaume Apollinaire",
+      "aliases": null,
+      "born": 1880
+    },
+    {
+      "id": 46,
+      "short": "Bradbury",
+      "name": "Ray Bradbury",
+      "aliases": null,
+      "born": 1920
+    },
+    {
+      "id": 47,
+      "short": "Bukowski",
+      "name": "Charles Bukowski",
+      "aliases": null,
+      "born": 1920
+    },
+    {
+      "id": 48,
+      "short": "Camus",
+      "name": "Albert Camus",
+      "aliases": null,
+      "born": 1913
+    },
+    {
+      "id": 49,
+      "short": "Clark",
+      "name": "Arthur Charles Clarke",
+      "aliases": null,
+      "born": 1917
+    },
+    {
+      "id": 50,
+      "short": "Clavel",
+      "name": "Bernard Clavel",
+      "aliases": null,
+      "born": 1923
+    },
+    {
+      "id": 51,
+      "short": "de Saint-Exupéry",
+      "name": "Antoine de Saint-Exupéry",
+      "aliases": null,
+      "born": 1900
+    },
+    {
+      "id": 52,
+      "short": "Doyle",
+      "name": "Arthur Conan Doyle",
+      "aliases": null,
+      "born": 1859
+    },
+    {
+      "id": 53,
+      "short": "Eco",
+      "name": "Umberto Eco",
+      "aliases": null,
+      "born": 1932
+    },
+    {
+      "id": 54,
+      "short": "Fitzgerald",
+      "name": "Francis Scott Fitzgerald",
+      "aliases": null,
+      "born": 1896
+    },
+    {
+      "id": 55,
+      "short": "Forsyth",
+      "name": "Frederick Forsyth",
+      "aliases": null,
+      "born": 1938
+    },
+    {
+      "id": 56,
+      "short": "Frey",
+      "name": "James Frey",
+      "aliases": null,
+      "born": 1969
+    },
+    {
+      "id": 57,
+      "short": "Ginsberg",
+      "name": "Allen Ginsberg",
+      "aliases": null,
+      "born": 1926
+    },
+    {
+      "id": 58,
+      "short": "Golding",
+      "name": "William Golding",
+      "aliases": null,
+      "born": 1911
+    },
+    {
+      "id": 59,
+      "short": "Grass",
+      "name": "Günter Grass",
+      "aliases": null,
+      "born": 1927
+    },
+    {
+      "id": 60,
+      "short": "Heller",
+      "name": "Joseph Heller",
+      "aliases": null,
+      "born": 1923
+    },
+    {
+      "id": 61,
+      "short": "Hemingway",
+      "name": "Ernest Hemingway",
+      "aliases": null,
+      "born": 1899
+    },
+    {
+      "id": 62,
+      "short": "Christiane F.",
+      "name": "Christiane Vera Felscherinow",
+      "aliases": null,
+      "born": 1962
+    },
+    {
+      "id": 63,
+      "short": "Christie",
+      "name": "Agatha Christie",
+      "aliases": null,
+      "born": 1890
+    },
+    {
+      "id": 64,
+      "short": "Irving",
+      "name": "John Irving",
+      "aliases": null,
+      "born": 1942
+    },
+    {
+      "id": 65,
+      "short": "Kafka",
+      "name": "Franz Kafka",
+      "aliases": null,
+      "born": 1883
+    },
+    {
+      "id": 66,
+      "short": "Kerouac",
+      "name": "Jack Kerouac",
+      "aliases": null,
+      "born": 1922
+    },
+    {
+      "id": 67,
+      "short": "Kesey",
+      "name": "Ken Kesey",
+      "aliases": null,
+      "born": 1935
+    },
+    {
+      "id": 68,
+      "short": "Lewis",
+      "name": "Clive Staples Lewis",
+      "aliases": null,
+      "born": 1898
+    },
+    {
+      "id": 69,
+      "short": "Moravia",
+      "name": "Alberto Moravia",
+      "aliases": null,
+      "born": 1907
+    },
+    {
+      "id": 70,
+      "short": "Orwell",
+      "name": "George Orwell",
+      "aliases": null,
+      "born": 1903
+    },
+    {
+      "id": 71,
+      "short": "Puzo",
+      "name": "Mario Gianluigi Puzo",
+      "aliases": null,
+      "born": 1920
+    },
+    {
+      "id": 72,
+      "short": "Remarque",
+      "name": "Erich Maria Remarque",
+      "aliases": null,
+      "born": 1898
+    },
+    {
+      "id": 73,
+      "short": "Rolland",
+      "name": "Romain Rolland",
+      "aliases": null,
+      "born": 1866
+    },
+    {
+      "id": 74,
+      "short": "Salinger",
+      "name": "Jerome David Salinger",
+      "aliases": null,
+      "born": 1919
+    },
+    {
+      "id": 75,
+      "short": "Shaw",
+      "name": "George Bernard Shaw",
+      "aliases": null,
+      "born": 1856
+    },
+    {
+      "id": 76,
+      "short": "Solženicyn",
+      "name": "Alexandr Solženicyn",
+      "aliases": null,
+      "born": 1918
+    },
+    {
+      "id": 77,
+      "short": "Steinbeck",
+      "name": "John Steinbeck",
+      "aliases": null,
+      "born": 1902
+    },
+    {
+      "id": 78,
+      "short": "Strugačtí",
+      "name": "Arkadij Strugackij, Boris Strugackij",
+      "aliases": null,
+      "born": 1925
+    },
+    {
+      "id": 79,
+      "short": "Styron",
+      "name": "William Styron",
+      "aliases": null,
+      "born": 1925
+    },
+    {
+      "id": 80,
+      "short": "Tolkien",
+      "name": "John Ronald Reuel Tolkien",
+      "aliases": null,
+      "born": 1892
+    },
+    {
+      "id": 81,
+      "short": "Bass",
+      "name": "Eduard Bass",
+      "aliases": null,
+      "born": 1888
+    },
+    {
+      "id": 82,
+      "short": "Čapek",
+      "name": "Karel Čapek",
+      "aliases": null,
+      "born": 1890
+    },
+    {
+      "id": 83,
+      "short": "Dousková",
+      "name": "Irena Dousková",
+      "aliases": null,
+      "born": 1964
+    },
+    {
+      "id": 84,
+      "short": "Drda",
+      "name": "Jan Drda",
+      "aliases": null,
+      "born": 1915
+    },
+    {
+      "id": 85,
+      "short": "Fučík",
+      "name": "Julius Fučík",
+      "aliases": null,
+      "born": 1903
+    },
+    {
+      "id": 86,
+      "short": "Fuks",
+      "name": "Ladislav Fuks",
+      "aliases": null,
+      "born": 1923
+    },
+    {
+      "id": 87,
+      "short": "Hašek",
+      "name": "Jaroslav Hašek",
+      "aliases": null,
+      "born": 1883
+    },
+    {
+      "id": 88,
+      "short": "Havel",
+      "name": "Václav Havel",
+      "aliases": null,
+      "born": 1936
+    },
+    {
+      "id": 89,
+      "short": "Havlíček",
+      "name": "Karel Havlíček Borovský",
+      "aliases": null,
+      "born": 1821
+    },
+    {
+      "id": 90,
+      "short": "Hrabal",
+      "name": "Bohumil Hrabal",
+      "aliases": null,
+      "born": 1914
+    },
+    {
+      "id": 91,
+      "short": "Hrabě",
+      "name": "Václav Hrabě",
+      "aliases": null,
+      "born": 1940
+    },
+    {
+      "id": 92,
+      "short": "Jirotka",
+      "name": "Zdeněk Jirotka",
+      "aliases": null,
+      "born": 1911
+    },
+    {
+      "id": 93,
+      "short": "John",
+      "name": "Radek John",
+      "aliases": null,
+      "born": 1954
+    },
+    {
+      "id": 94,
+      "short": "Kaplický",
+      "name": "Václav Kaplický",
+      "aliases": null,
+      "born": 1895
+    },
+    {
+      "id": 95,
+      "short": "Kožík",
+      "name": "František Kožík",
+      "aliases": null,
+      "born": 1909
+    },
+    {
+      "id": 96,
+      "short": "Kryl",
+      "name": "Karel Kryl",
+      "aliases": null,
+      "born": 1944
+    },
+    {
+      "id": 97,
+      "short": "Kundera",
+      "name": "Milan Kundera",
+      "aliases": null,
+      "born": 1929
+    },
+    {
+      "id": 98,
+      "short": "Lustig",
+      "name": "Arnošt Lustig",
+      "aliases": null,
+      "born": 1926
+    },
+    {
+      "id": 99,
+      "short": "Mornštajnová",
+      "name": "Alena Mornštajnová",
+      "aliases": null,
+      "born": 1963
+    },
+    {
+      "id": 100,
+      "short": "Nezval",
+      "name": "Vítězslav Nezval",
+      "aliases": null,
+      "born": 1900
+    },
+    {
+      "id": 101,
+      "short": "Olbracht",
+      "name": "Ivan Olbracht",
+      "aliases": null,
+      "born": 1882
+    },
+    {
+      "id": 102,
+      "short": "Otčenášek",
+      "name": "Jan Otčenášek",
+      "aliases": null,
+      "born": 1924
+    },
+    {
+      "id": 103,
+      "short": "Pavel",
+      "name": "Ota Pavel",
+      "aliases": null,
+      "born": 1930
+    },
+    {
+      "id": 104,
+      "short": "Poláček",
+      "name": "Karel Poláček",
+      "aliases": null,
+      "born": 1892
+    },
+    {
+      "id": 105,
+      "short": "Řezáč",
+      "name": "Václav Řezáč",
+      "aliases": null,
+      "born": 1901
+    },
+    {
+      "id": 106,
+      "short": "Svěrák-Smoljak",
+      "name": "Zdeněk Svěrák, Ladislav Smoljak",
+      "aliases": [ "Divadlo Járy Cimrmana" ],
+      "born": 1931
+    },
+    {
+      "id": 107,
+      "short": "Šabach",
+      "name": "Petr Šabach",
+      "aliases": null,
+      "born": 1951
+    },
+    {
+      "id": 108,
+      "short": "Škvorecký",
+      "name": "Josef Škvorecký",
+      "aliases": null,
+      "born": 1924
+    },
+    {
+      "id": 109,
+      "short": "Vančura",
+      "name": "Vladislav Vančura",
+      "aliases": null,
+      "born": 1891
+    },
+    {
+      "id": 110,
+      "short": "Viewegh",
+      "name": "Michal Viewegh",
+      "aliases": null,
+      "born": 1962
+    },
+    {
+      "id": 111,
+      "short": "V+W",
+      "name": "Jiří Voskovec, Jan Werich",
+      "aliases": [ "Divadlo Semafor", "Voskovec-Werich" ],
+      "born": 1905
+    },
+    {
+      "id": 112,
+      "short": "Weiss",
+      "name": "Jan Weiss",
+      "aliases": null,
+      "born": 1892
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "short": null,
+      "name": "Próza",
+      "kind": "form",
+      "limit": { "min": 2 }
+    },
+    {
+      "id": 2,
+      "short": null,
+      "name": "Poezie",
+      "kind": "form",
+      "limit": { "min": 2 }
+    },
+    {
+      "id": 3,
+      "short": null,
+      "name": "Drama",
+      "kind": "form",
+      "limit": { "min": 2 }
+    },
+    {
+      "id": 6,
+      "short": "18. stol. a dříve",
+      "name": "Literatura do konce 18. století",
+      "kind": "era",
+      "limit": { "min": 2 }
+    },
+    {
+      "id": 7,
+      "short": "19. stol.",
+      "name": "Literatura 19. století",
+      "kind": "era",
+      "limit": { "min": 3 }
+    },
+    {
+      "id": 8,
+      "short": "Svět 20. a 21. stol.",
+      "name": "Světová literatura 20. a 21. století",
+      "kind": "era",
+      "limit": { "min": 4 }
+    },
+    {
+      "id": 9,
+      "short": "Česko 20. a 21. stol.",
+      "name": "Česká literatura 20. a 21. století",
+      "kind": "era",
+      "limit": { "min": 5 }
+    }
+  ],
+  "extra": {
+    "authorLimit": { "max": 2 },
+    "bookLimit": { "min": 20 }
+  }
+}
