@@ -5,7 +5,6 @@ import type { Mutable } from "../typeutil";
 import SelectionContext from "./SelectionContext";
 import type { Item, SelectionOperators, Selection } from "./selectionStructure";
 import CookieContext from "../cookie/CookieContext";
-import useQueryParam from "../queryparams/useQueryParam";
 import QueryParamsContext from "../queryparams/QueryParamsContext";
 
 
@@ -24,6 +23,7 @@ export default function SelectionLoader(props: {
         return () => queryParamsContext.unsubscribe(handle);
     }, [ queryParamsContext, setBlank ]);
 
+    const isSearchEmpty = queryParamsContext.values["s"] === null;
     React.useEffect(() => {
         if (queryParamsContext.values["s"] !== null)
             return;
@@ -31,7 +31,7 @@ export default function SelectionLoader(props: {
         const handle = { names: [ "selection" ], notify: () => setBlank({}) };
         cookieContext.subscribe(handle);
         return () => cookieContext.unsubscribe(handle);
-    }, [ queryParamsContext.values["s"] === null, cookieContext, queryParamsContext, setBlank ]);
+    }, [ isSearchEmpty, cookieContext, queryParamsContext, setBlank ]);
 
 
     const selectionString = queryParamsContext.values["s"] ?? cookieContext.values["selection"] ?? "";
