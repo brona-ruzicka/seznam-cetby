@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Bible: Starý zákon",
-      "note": "5 knih Mojžíšových",
+      "note": "5\u00a0knih\u00a0Mojžíšových",
       "published": 1,
       "authors": null,
       "categories": [ 1, 6 ]
@@ -379,7 +379,7 @@
     {
       "id": 13,
       "name": "Povídky",
-      "note": "Jáma a kyvadlo, Zlatý skarabeus, Zánik domu Usherů, Černý kocour, Vraždy v ulici Morgue",
+      "note": "Jáma\u00a0a\u00a0kyvadlo, Zlatý\u00a0skarabeus, Zánik\u00a0domu\u00a0Usherů, Černý\u00a0kocour, Vraždy\u00a0v\u00a0ulici\u00a0Morgue",
       "published": 1850,
       "authors": [ 34 ],
       "categories": [ 1, 7 ]

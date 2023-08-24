@@ -181,7 +181,7 @@ export default function SearchFragment() {
                             e.preventDefault();
 
                             const values = Object.values(matched);
-                            if (values.length != 1) return;
+                            if (values.length !== 1) return;
 
                             selection.toggle(values[0].id);
                             setSearch("");
@@ -258,7 +258,7 @@ export default function SearchFragment() {
 
 
 const normalize = (input: string): string => {
-    return input.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f,.:;?!_\-]/g, "");
+    return input.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f,.:;?!_\\/-]/g, "");
 }
 
 
@@ -325,15 +325,13 @@ const CustomListItemContent = (props: {
                             props.book.authors?.map(author => author.name).join(", ") || undefined
                         )
                     }
+                    { !isSmallScreen && props.book.note && !!props.book.authors.length && (<br/>) }
                     {
-                        props.book.note != null && (
-                            <>
-                                { !isSmallScreen && (<br/>) }
-                                <i>{ props.book.note }</i>
-                                { isSmallScreen && (<br/>) }
-                            </>
+                        props.book.note && (
+                            <i>{ props.book.note }</i>
                         )
                     }
+                    { isSmallScreen && props.book.note && !!props.book.categories.length && (<br/>) }
                     {
                         isSmallScreen && (
                             props.book.categories?.map(category => category.short).join(" • ") || undefined
