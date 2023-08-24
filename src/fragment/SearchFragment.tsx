@@ -169,7 +169,25 @@ export default function SearchFragment() {
     return (
         <Stack sx={{ height: "100%" }}>
             <Box sx={{ position: "relative" }}>
-                <StyledTextField variant="standard" placeholder="Prohledat díla…" autoFocus fullWidth value={search} onChange={e => setSearch(e.target.value, true)}/>
+                <StyledTextField
+                    variant="standard"
+                    placeholder="Prohledat díla…"
+                    autoFocus
+                    fullWidth
+                    value={search}
+                    onChange={e => setSearch(e.target.value, true)}
+                    onKeyUp={e => {
+                        if (e.code === "Enter") {
+                            e.preventDefault();
+
+                            const values = Object.values(matched);
+                            if (values.length != 1) return;
+
+                            selection.toggle(values[0].id);
+                            setSearch("");
+                        }
+                    }}
+                />
                 <Stack
                     direction="row"
                     sx={{
