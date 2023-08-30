@@ -1,8 +1,10 @@
 import React from "react";
+import QRCode from "qrcode";
 
-import { Font, Document, Page, Text, View } from '@react-pdf/renderer';
+import { Font, Document, Page, Text, View, Image } from '@react-pdf/renderer';
 
 import { BookItem } from '../database/databaseStructure';
+import { generateShareUrl } from "../hook/useShare";
 
 Font.register({
     family: "Arial", fonts: [
@@ -45,6 +47,21 @@ export default function SeznamCetby(props: {
         return sorted;
     }, [ props.books ]);
 
+    const qrCodePromise = React.useCallback(() => {
+        const shareUrl = generateShareUrl( props.books.map(book => book.id) ) + "&tab=overview&suppress_share";
+
+        return new Promise<string>((resolve, reject) => {
+            QRCode.toDataURL(shareUrl, {
+                errorCorrectionLevel: "H",
+                margin: 0,
+                type: "image/png"
+            }, (error, url) => {
+                if (error) reject(error)
+                else resolve(url)
+            });
+        })
+    }, [ props.books ])
+
     return (
         <Document
             title={`Seznam četby - ${props.personName}`}
@@ -70,7 +87,7 @@ export default function SeznamCetby(props: {
                     <Text style={{
                         fontSize: 12,
                     }}>
-                        {`Seznam literárních děl k ústní části maturitní zkoušky z českého jazyka`}
+                        {`Seznam literárních děl k ústní části maturitní zkoušky\nz českého jazyka a literatury`}
                     </Text>
                 </View>
                 <Padder padding={16} />
@@ -152,47 +169,70 @@ export default function SeznamCetby(props: {
                     </View>
                 </View>
             </Page>
-            { props.pronouncement && (<Page style={{
+            <Page style={{
                 fontFamily: "Arial",
                 lineHeight: "1.2",
                 padding: "2.5cm",
                 display: "flex",
                 flexDirection: "column",
             }}>
+                { props.pronouncement && (<>
+                    <View style={{
+                        fontSize: 12,
+                    }}>
+                        <Text>{"Čestně prohlašuji,"}</Text>
+                        <Padder padding={5}/>
+                        <Text>{"že výběr titulů odpovídá kritériím stanoveným předmětovou komisí ČJL."}</Text>
+                    </View>
+                    <Padder padding={30} />
+                    <View break={false} style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "flex-end",
+                        fontSize: 12,
+                    }}>
+                        <View style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center"
+                        }}>
+                            {props.dateOfIssue && (<Text>{props.dateOfIssue}</Text>)}
+                            <Text style={{ marginTop: -5, letterSpacing: 1,  }}>{"...................................."}</Text>
+                            <Text style={{ fontSize: 10, }}>{"Datum"}</Text>
+                        </View>
+                        <View style={{ flexGrow: 1, }}/>
+                        <View style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center"
+                        }}>
+                            <Text style={{ marginTop: -5, letterSpacing: 1,  }}>{"...................................."}</Text>
+                            <Text style={{ fontSize: 10, }}>{"Podpis"}</Text>
+                        </View>
+                    </View>
+                </>)}
+                <View style={{ flexGrow: 1, }}/>
                 <View style={{
-                    fontSize: 12,
-                }}>
-                    <Text>{"Čestně prohlašuji,"}</Text>
-                    <Padder padding={5}/>
-                    <Text>{"že výběr titulů odpovídá kritériím stanoveným předmětovou komisí ČJL."}</Text>
-                </View>
-                <Padder padding={30} />
-                <View break={false} style={{
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: "column",
                     alignItems: "flex-end",
-                    fontSize: 12,
                 }}>
-                    <View style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center"
+                    <Text style={{
+                        marginBottom: 1,
+                        color: "#dddddd",
+                        fontSize: 8
+
                     }}>
-                        {props.dateOfIssue && (<Text>{props.dateOfIssue}</Text>)}
-                        <Text style={{ marginTop: -5, letterSpacing: 1,  }}>{"...................................."}</Text>
-                        <Text style={{ fontSize: 10, }}>{"Datum"}</Text>
-                    </View>
-                    <View style={{ flexGrow: 1, }}/>
-                    <View style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center"
-                    }}>
-                        <Text style={{ marginTop: -5, letterSpacing: 1,  }}>{"...................................."}</Text>
-                        <Text style={{ fontSize: 10, }}>{"Podpis"}</Text>
-                    </View>
+                        {"App by Bronislav Růžička"}
+                    </Text>
+                    <Image
+                        style={{
+                            maxHeight: "4cm"
+                        }}
+                        src={qrCodePromise}
+                    />
                 </View>
-            </Page>) }
+            </Page>
         </Document>
     );
 };

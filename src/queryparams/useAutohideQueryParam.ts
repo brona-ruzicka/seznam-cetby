@@ -9,12 +9,13 @@ export default function useAutohideQueryParam(name: string) {
 
     const setAutohideQuery = React.useCallback((
         query: string | ((prev: string) => string),
-        replace?: boolean | undefined
+        replace?: boolean | undefined,
+        silent?: boolean | undefined
     ) => setQuery(
         typeof query === "function"
             ? (prev) => (query(prev ?? "") || null)
             : (query || null), 
-        replace
+        replace, silent
     ), [ setQuery ] );
 
     return [ query ?? "", setAutohideQuery ] as const;

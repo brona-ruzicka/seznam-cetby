@@ -20,13 +20,14 @@ export default function useQueryParam(name: string) {
 
     const setter = React.useCallback((
         query: string|null | ((prev: string|null) => string|null),
-        replace?: boolean | undefined
+        replace?: boolean | undefined,
+        silent?: boolean | undefined
     ) => {
         context.update({
             [name]: typeof query === "function"
                 ? query(context.values[name])
                 : query
-        }, replace);
+        }, replace, silent);
     }, [ name, context ]);
 
 

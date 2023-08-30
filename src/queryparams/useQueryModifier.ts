@@ -10,9 +10,10 @@ export default function useQueryModifier() {
     const modify = React.useCallback(
         (
             modifications: Record<string, string|null>,
-            replace?: boolean|undefined
+            replace?: boolean | undefined,
+            silent?: boolean | undefined
         ) => { 
-            context.update(modifications, replace);
+            context.update(modifications, replace, silent);
         },
         [ context ]
     )

@@ -19,13 +19,14 @@ export default function useGlobalStateValue(name: string) {
 
 
     const setter = React.useCallback((
-        query: string|null | ((prev: string|null) => string|null)
+        query: string|null | ((prev: string|null) => string|null),
+        silent?: boolean | undefined
     ) => {
         context.update({
             [name]: typeof query === "function"
                 ? query(context.values[name])
                 : query
-        });
+        }, silent);
     }, [ name, context ]);
 
 

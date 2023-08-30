@@ -35,7 +35,7 @@ export default function CookieLoader(props: {
         
         const subscribers = new Set<SubscriberHandle>();
 
-        const update = (updates: Record<string, string|null>, attributes?: CookieAttributes | undefined) => {
+        const update = (updates: Record<string, string|null>, attributes?: CookieAttributes | undefined, silent?: boolean|undefined) => {
 
             const changes = Object.entries(updates)
                 .filter(([key, value]) => values[key] !== value);
@@ -48,6 +48,8 @@ export default function CookieLoader(props: {
                     Cookies.set(key, value, { domain: DEFAULT_DOMAIN, path: DEFAULT_PATH, expires: DEFAULT_EXPIRES, ...attributes });
                 }
             });
+
+            if (silent) return;
 
             setTimeout(() => {
                 const keys = changes.map(([key,]) => key);

@@ -20,7 +20,7 @@ export default function GlobalStateLoader(props: {
 
         const subscribers = new Set<SubscriberHandle>();
 
-        const update = (updates: Record<string, string|null>) => {
+        const update = (updates: Record<string, string|null>, silent?: boolean|undefined) => {
 
             const changes = Object.entries(updates)
                 .filter(([key, value]) => values[key] !== value);
@@ -28,6 +28,8 @@ export default function GlobalStateLoader(props: {
             changes.forEach(([key, value]) => {
                 values[key] = value;
             });
+
+            if (silent) return;
 
             setTimeout(() => {
                 const keys = changes.map(([key,]) => key);

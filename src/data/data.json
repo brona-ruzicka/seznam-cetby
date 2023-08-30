@@ -126,7 +126,7 @@
       "note": null,
       "published": 1886,
       "authors": [ 11 ],
-      "categories": [ 1, 6 ]
+      "categories": [ 1, 7 ]
     },
     {
       "id": 3,
@@ -246,7 +246,7 @@
       "note": null,
       "published": 1915,
       "authors": [ 21 ],
-      "categories": [ 1, 7 ]
+      "categories": [ 1, 9 ]
     },
     {
       "id": 18,
@@ -318,7 +318,7 @@
       "note": null,
       "published": 1915,
       "authors": [ 28 ],
-      "categories": [ 1, 7 ]
+      "categories": [ 1, 8 ]
     },
     {
       "id": 15,
@@ -662,7 +662,7 @@
       "note": null,
       "published": 1925,
       "authors": [ 65 ],
-      "categories": [ 1, 9 ]
+      "categories": [ 1, 8 ]
     },
     {
       "id": 28,
@@ -1862,7 +1862,7 @@
     {
       "id": 89,
       "short": "Havlíček",
-      "name": "Karel Havlíček Borovský",
+      "name": "Jaroslav Havlíček",
       "aliases": null,
       "born": 1821
     },

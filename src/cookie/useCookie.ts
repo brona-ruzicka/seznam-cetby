@@ -22,13 +22,14 @@ export default function useCookie(name: string) {
 
     const setter = React.useCallback((
         query: string|null | ((prev: string|null) => string|null),
-        attributes?: CookieAttributes | undefined
+        attributes?: CookieAttributes | undefined,
+        silent?: boolean | undefined
     ) => {
         context.update({
             [name]: typeof query === "function"
                 ? query(context.values[name])
                 : query
-        }, attributes);
+        }, attributes, silent);
     }, [ name, context ]);
 
 

@@ -9,7 +9,7 @@ type SubscriberHandle = {
 type ContextHandle = Readonly<{
     subscribe: (handle: SubscriberHandle) => void,
     unsubscribe: (handle: SubscriberHandle) => void,
-    update: (updates: ReadonlyRecord<string, string|null>, replace?: boolean|undefined) => void,
+    update: (updates: ReadonlyRecord<string, string|null>, replace?: boolean|undefined, silent?: boolean|undefined) => void,
     values: ReadonlyRecord<string, string|null>
 }>;
 

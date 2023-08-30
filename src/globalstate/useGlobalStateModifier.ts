@@ -9,9 +9,10 @@ export default function useGlobalStateModifier() {
 
     const modify = React.useCallback(
         (
-            modifications: Record<string, string|null>
+            modifications: Record<string, string|null>,
+            silent?: boolean | undefined,
         ) => { 
-            context.update(modifications);
+            context.update(modifications, silent);
         },
         [ context ]
     )

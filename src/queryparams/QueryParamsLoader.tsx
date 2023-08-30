@@ -28,7 +28,7 @@ export default function QueryParamsLoader(props: {
         const subscribers = new Set<SubscriberHandle>();
 
 
-        const change = (changes: [ string, string|null][]) => {
+        const change = (changes: [ string, string|null][], silent?: boolean|undefined) => {
             
             changes.forEach(([key, value]) => {
                 values[key] = value;
@@ -40,6 +40,8 @@ export default function QueryParamsLoader(props: {
                 }
             });
 
+            if (silent) return;
+
             setTimeout(() => {
                 const keys = changes.map(([key,]) => key);
                 Array.from(subscribers.values())
@@ -49,12 +51,12 @@ export default function QueryParamsLoader(props: {
 
         }
 
-        const update = (updates: Record<string, string|null>, replace?: boolean|undefined) => {
+        const update = (updates: Record<string, string|null>, replace?: boolean|undefined, silent?: boolean|undefined) => {
 
             const changes = Object.entries(updates)
                 .filter(([key, value]) => values[key] !== value);
 
-            change(changes);
+            change(changes, silent);
 
             const url = new URL(window.location.href);
             url.search = search.toString();

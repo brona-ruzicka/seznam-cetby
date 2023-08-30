@@ -12,9 +12,10 @@ export default function useCookieModifier() {
     const modify = React.useCallback(
         (
             modifications: Record<string, string|null>,
-            attributes?: CookieAttributes | undefined
+            attributes?: CookieAttributes | undefined,
+            silent?: boolean | undefined
         ) => { 
-            context.update(modifications, attributes);
+            context.update(modifications, attributes, silent);
         },
         [ context ]
     )
