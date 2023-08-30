@@ -50,8 +50,10 @@ export default function SearchFragment() {
 
     const database = useDatabase();
 
+    const theme = useTheme();
+    const small = useMediaQuery(theme.breakpoints.down("sm"));
     const [ tab ] = useAutohideQueryParam("tab");
-    const isFocused = tab === "search";
+    const isFocused = !small || tab === "search";
 
     const [ search, setSearch ] = useAutohideQueryParam("search");
     const [ sortStr, setSort ] = useCookie("sort");
