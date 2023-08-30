@@ -18,10 +18,9 @@ export default function SmallLayout(props: {
         index = 0;
     }
 
-    const setIndex = (index: number) => {
+    const setIndex = React.useCallback((index: number) => {
         props.setActive(props.children[index].tag);
-    };
-
+    }, [ props.children, props.setActive ]);
 
     return (
         <Box

@@ -23,7 +23,10 @@ export default function HighLayout(props: {
     setActive: Consumer<string>,
 }) {
 
-    const { special: { search, overview }, rest } = exportSpecialFragments(props.children, ["search", "overview"]);
+    const { special: { search, overview }, rest } = React.useMemo(
+        () => exportSpecialFragments(props.children, ["search", "overview"]),
+        [ props.children ]
+    );
 
 
     const [ silentIndex, silentSetIndex ] = useSilentState(0);
@@ -46,17 +49,18 @@ export default function HighLayout(props: {
     }
 
     
-    const setIndex = (index: number) => {
+    const setIndex = React.useCallback((index: number) => {
         silentSetIndex(index, true);
         props.setActive(rest[index].tag);
-    };
-    const setCollapsed = (collapsed: boolean) => {
+    }, [ rest, props.setActive ]);
+
+    const setCollapsed = React.useCallback((collapsed: boolean) => {
         silentSetCollapsed(collapsed, true);
         if (collapsed)
             props.setActive(rest[index].tag);
         else
             props.setActive("overview");
-    };
+    }, [ rest, props.setActive ]);
     
 
     return (

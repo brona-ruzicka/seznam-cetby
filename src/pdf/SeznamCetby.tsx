@@ -223,7 +223,7 @@ export default function SeznamCetby(props: {
                         fontSize: 8
 
                     }}>
-                        {"App by Bronislav Růžička"}
+                        {"App by Broňa Růžička"}
                     </Text>
                     <Image
                         style={{

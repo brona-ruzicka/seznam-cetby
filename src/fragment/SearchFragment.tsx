@@ -50,6 +50,9 @@ export default function SearchFragment() {
 
     const database = useDatabase();
 
+    const [ tab ] = useAutohideQueryParam("tab");
+    const isFocused = tab === "search";
+
     const [ search, setSearch ] = useAutohideQueryParam("search");
     const [ sortStr, setSort ] = useCookie("sort");
 
@@ -172,7 +175,7 @@ export default function SearchFragment() {
                 <StyledTextField
                     variant="standard"
                     placeholder="Prohledat díla…"
-                    autoFocus
+                    autoFocus={isFocused}
                     fullWidth
                     value={search}
                     onChange={e => setSearch(e.target.value, true)}

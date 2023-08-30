@@ -20,7 +20,10 @@ export default function LowLayout(props: {
     setActive: Consumer<string>,
 }) {
     
-    const { special: { search }, rest } = exportSpecialFragments(props.children, [ "search" ]);
+    const { special: { search }, rest } = React.useMemo(
+        () => exportSpecialFragments(props.children, [ "search" ]),
+        [ props.children]
+    );
 
     const [ silentIndex, silentSetIndex ] = useSilentState(0);
 
@@ -32,10 +35,10 @@ export default function LowLayout(props: {
         index = silentIndex;
     }
 
-    const setIndex = (index: number) => {
+    const setIndex = React.useCallback((index: number) => {
         silentSetIndex(index, true);
         props.setActive(rest[index].tag);
-    };
+    }, [ props.children, props.setActive ]);
 
 
 
