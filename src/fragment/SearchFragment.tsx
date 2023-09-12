@@ -57,7 +57,12 @@ export default function SearchFragment() {
 
     const [ sortStr, setSort ] = useCookie("sort");
     const sort: Sort = sorts.includes(sortStr as Sort) ? sortStr as Sort : sorts[0];
-    const cycleSort = () => setSort(sorts[(sorts.indexOf(sort) + 1) % sorts.length])
+    const cycleSort = React.useCallback(() => {
+        setSort(sorts[(sorts.indexOf(sort) + 1) % sorts.length]);
+    }, [sort, setSort]);
+    const reverseCycleSort = React.useCallback(() => {
+        setSort(sorts[(sorts.indexOf(sort) - 1 + sorts.length) % sorts.length]);
+    }, [sort, setSort]);
 
 
     const [ searchParam, setSearchParam ] = useAutohideQueryParam("search");
@@ -309,6 +314,7 @@ export default function SearchFragment() {
                     >
                         <IconButton
                             onClick={cycleSort}
+                            onContextMenuCapture={e => { e.preventDefault(); e.stopPropagation(); reverseCycleSort() }}
                             sx={{ position: "relative" }}
                         >
                             <ArrowDropUp
