@@ -50,10 +50,13 @@ export default function SearchFragment() {
 
     const database = useDatabase();
 
+
     const theme = useTheme();
-    const small = useMediaQuery(theme.breakpoints.down("sm"));
+    const smallOrMedium = useMediaQuery(theme.breakpoints.down("md"));
+
     const [ tab ] = useAutohideQueryParam("tab");
-    const isFocused = !small || tab === "search";
+    const autoFocus = !smallOrMedium || tab === "search";
+
 
     const [ sortStr, setSort ] = useCookie("sort");
     const sort: Sort = sorts.includes(sortStr as Sort) ? sortStr as Sort : sorts[0];
@@ -271,7 +274,7 @@ export default function SearchFragment() {
                 <StyledTextField
                     variant="standard"
                     placeholder="Prohledat díla…"
-                    autoFocus={isFocused}
+                    autoFocus={autoFocus}
                     fullWidth
                     value={search}
                     onChange={e => setSearch(e.target.value)}

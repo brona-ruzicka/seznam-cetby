@@ -18,16 +18,17 @@ import CategoriesFragment from "./fragment/CategoriesFragment";
 import OpeningSharedDialog from "./dialog/OpeningSharedDialog";
 import ShareDialog from "./dialog/ShareDialog";
 import ExportDialog from "./dialog/ExportDialog";
+import ErrorDialog from "./dialog/ErrorDialog";
 
 
 export default function App() {
 
     return (
         <ThemeLoader>
-            <DatabaseLoader>
-                <GlobalStateLoader>
-                    <CookieLoader>
-                        <QueryParamsLoader>
+            <GlobalStateLoader>
+                <CookieLoader>
+                    <QueryParamsLoader>
+                        <DatabaseLoader>
                             <SelectionLoader>
                                 <CountsLoader>
                                     <Layout>
@@ -43,13 +44,14 @@ export default function App() {
                                         <OpeningSharedDialog/>
                                         <ShareDialog/>
                                         <ExportDialog/>
+                                        <ErrorDialog/>
                                     </>
                                 </CountsLoader>
                             </SelectionLoader>
-                        </QueryParamsLoader>
-                    </CookieLoader>
-                </GlobalStateLoader>
-            </DatabaseLoader>
+                        </DatabaseLoader>
+                    </QueryParamsLoader>
+                </CookieLoader>
+            </GlobalStateLoader>
         </ThemeLoader>
     );
 }
