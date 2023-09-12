@@ -26,7 +26,7 @@ export default function DatabaseLoader(props: {
         const pathname = window.location.pathname;
         const path = pathname.substring(0, pathname.lastIndexOf("/"));
 
-        fetch(`${window.location.origin}${path}/data/data.json`)
+        fetch(`${window.location.origin}${path}/data/data.json?override_cache=${Date.now()}`)
             .then(res => res.json())
             .then(
                 (result) => setRequest({
