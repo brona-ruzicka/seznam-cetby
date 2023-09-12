@@ -154,26 +154,35 @@ export default function SearchFragment() {
             const matches = words.map(word => {
                 switch (category) {
                     case "kniha":
+                    case "nazev":
                     case "book":
+                    case "tit":
                         return searchIndex.books.filter(([query, _]) => query.includes(word)).map(([_, book]) => book);
                     case "vydano":
+                    case "vyd":
                     case "published":
+                    case "bub":
                         return searchIndex.published.filter(([query, _]) => query.startsWith(word)).map(([_, book]) => book);
                     case "autor":
+                    case "aut":
                     case "author":
                         return searchIndex.authors.filter(([query, _]) => query.includes(word)).flatMap(([_, author]) => author.books)
                     case "kategorie":
+                    case "kat":
                     case "category":
+                    case "cat":
                         return searchIndex.categories.filter(([query, _]) => query.includes(word)).flatMap(([_, category]) => category.books);
                     case "vybrano":
+                    case "vyb":
                     case "selected":
+                    case "sel":
                         if (!database.loaded) break;
                         if ("ano yes".includes(word))
                             return Object.values(database.books).filter(book => selection.includes(book.id));
                         if ("ne no".includes(word))
                             return Object.values(database.books).filter(book => !selection.includes(book.id));
                         break;
-                    case "any":
+                    default:
                         return [
                             ...searchIndex.books.filter(([query, _]) => query.includes(word)).map(([_, book]) => book),
                             ...searchIndex.published.filter(([query, _]) => query.includes(word)).map(([_, book]) => book),
