@@ -6,18 +6,51 @@ import type { BookItem, AuthorItem, CategoryItem } from "./databaseStructure";
 import DatabaseContext from "./DatabaseContext";
 import databaseDefault from "./databaseDefault";
 
-import data from "../data/data.json";
-
-
-
+import { Data } from "./dataStructure";
 
 export default function DatabaseLoader(props: {
     children?: React.ReactNode | undefined,
 }) {
+
+    const [ request, setRequest ] = React.useState<{
+        loaded: boolean,
+        result: Data|null,
+        error: any|null
+    }>({
+        loaded: false,
+        result: null,
+        error: null
+    });
+
+    React.useEffect(() => {
+        const pathname = window.location.pathname;
+        const path = pathname.substring(0, pathname.lastIndexOf("/"));
+
+        fetch(`${window.location.origin}${path}/data/data.json`)
+            .then(res => res.json())
+            .then(
+                (result) => setRequest({
+                    loaded: true,
+                    result,
+                    error: null,
+                }),
+                (error) => setRequest({
+                    loaded: true,
+                    result: null,
+                    error,
+                })
+            )
+
+    }, [ ])
+    
+
     const [ database, setDatabase ] = React.useState(databaseDefault);
 
-    
     React.useEffect(() => {
+
+        if (request.result === null) return;
+
+        const data = request.result;
 
         const books: Record<number, DeepMutable<BookItem>> = {};
         const authors: Record<number, DeepMutable<AuthorItem>> = {};
@@ -82,7 +115,7 @@ export default function DatabaseLoader(props: {
             extra: data.extra
         });
 
-    }, [ data ]);
+    }, [ request ]);
 
     return (
         <DatabaseContext.Provider

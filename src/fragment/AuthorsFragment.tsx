@@ -40,7 +40,7 @@ export default function AuthorsFragment() {
                                 sx={{padding: 0}}
                             >
                                 <ListItemButton
-                                    onClick={() => search(author.name)}
+                                    onClick={() => search(`autor:"${author.name}"`)}
                                 >
                                     <ListItemText primary={`${author.name}`}/>
                                 </ListItemButton>
