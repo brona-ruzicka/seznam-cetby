@@ -16,7 +16,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Autocomplete from "@mui/material/Autocomplete";
 
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import "dayjs/locale/cs";
 
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -48,12 +48,47 @@ export default function ExportDialog() {
     const theme = useTheme();
     const small = useMediaQuery(theme.breakpoints.down("sm"));
 
-    const [ personName, setPersonName ] = useCookie("person_name");
-    const [ personClass, setPersonClass ] = useCookie("person_class");
-    const [ examYear, setExamYear ] = useCookie("exam_year");
+    const [ personNameCookie, setPersonNameCookie ] = useCookie("person_name");
+    const [ personName, setPersonNameText ] = React.useState(personNameCookie);
+    const setPersonName = React.useCallback(
+        (text: string|null) => {
+            setPersonNameText(text);
+            setPersonNameCookie(text);
+        },
+        [setPersonNameText, setPersonNameCookie]
+    );
+
+    const [ personClassCookie, setPersonClassCookie ] = useCookie("person_class");
+    const [ personClass, setPersonClassText ] = React.useState(personClassCookie);
+    const setPersonClass = React.useCallback(
+        (text: string|null) => {
+            setPersonClassText(text);
+            setPersonClassCookie(text); 
+        },
+        [setPersonClassText, setPersonClassCookie]
+    );
+
+    const [ examYearCookie, setExamYearCookie ] = useCookie("exam_year");
+    const [ examYear, setExamYearValue ] = React.useState<Dayjs|null>(examYearCookie ? dayjs(examYearCookie, "YYYY") : dayjs(new Date()));
+    const setExamYear = React.useCallback(
+        (value: Dayjs|null) => {
+            setExamYearValue(value);
+            setExamYearCookie(value?.format("YYYY") ?? null, { expires: 7 });
+        },
+        [setExamYearValue, setExamYearCookie]
+    );
 
     const [ showDate, setShowDate ] = useCookie("show_date");
-    const [ dateOfIssue, setDateOfIssue ] = useCookie("date_of_issue");
+
+    const [ dateOfIssueCookie, setDateOfIssueCookie ] = useCookie("date_of_issue");
+    const [ dateOfIssue, setDateOfIssueValue ] = React.useState<Dayjs|null>(dateOfIssueCookie ? dayjs(dateOfIssueCookie, "YYYY-MM-DD") : dayjs(new Date()));
+    const setDateOfIssue = React.useCallback(
+        (value: Dayjs|null) => {
+            setDateOfIssueValue(value);
+            setDateOfIssueCookie(value?.format("YYYY-MM-DD") ?? null, { expires: 7 });
+        },
+        [setDateOfIssueValue, setDateOfIssueValue]
+    );
 
     const [ pronouncement, setPronouncement ] = useCookie("pronouncement");
 
@@ -101,8 +136,8 @@ export default function ExportDialog() {
                                 />
                                 <DatePicker
                                     label="Rok maturity"
-                                    value={examYear ? dayjs(examYear, "YYYY") : dayjs(new Date())}
-                                    onChange={(value) => setExamYear(value?.format("YYYY") ?? null, { expires: 7 })}
+                                    value={examYear}
+                                    onChange={(value) => setExamYear(value)}
                                     format={"YYYY"}
                                     views={["year"]}
                                 />
@@ -115,8 +150,8 @@ export default function ExportDialog() {
                                     <DatePicker
                                         label="Datum podpisu"
                                         disabled={showDate === "false"}
-                                        value={dateOfIssue ? dayjs(dateOfIssue, "YYYY-MM-DD") : dayjs(new Date())}
-                                        onChange={(value) => setDateOfIssue(value?.format("YYYY-MM-DD") ?? null, { expires: 7 })}
+                                        value={dateOfIssue}
+                                        onChange={setDateOfIssue}
                                         format={"DD.MM.YYYY"}
                                     />
                                     <FormControlLabel

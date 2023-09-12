@@ -26,8 +26,6 @@ export default function Layout(props: {
 
     const [ active, setActive ] = useAutohideQueryParam("tab");
     const setActiveReplace = React.useCallback((tab: string) => {
-        console.log("LAYOUT", tab)
-        debugger;
         setActive(tab, true);
     }, [ setActive ]);
 

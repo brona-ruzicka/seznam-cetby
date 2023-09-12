@@ -55,7 +55,7 @@ export default function OverviewFragment() {
                     component: (
                         <TwoPartChip
                             sx={{ margin: 0.5 }}
-                            onClick={() => search("Vybráno")}
+                            onClick={() => search("vybráno:ano")}
                             variant="outlined"
                             size="small"
                             primary={"Počet děl"}
@@ -66,6 +66,7 @@ export default function OverviewFragment() {
             />
         );
         buttonEnabled &&= !totalUnder;
+        buttonEnabled &&= !totalOver;
 
 
         const categoryProblems = Object.entries(counts.categories)
@@ -90,7 +91,7 @@ export default function OverviewFragment() {
                             component: (
                                 <TwoPartChip
                                     sx={{ margin: 0.5 }}
-                                    onClick={() => search(category.name)}
+                                    onClick={() => search(`kategorie:"${category.name}"`)}
                                     variant="outlined"
                                     size="small"
                                     primary={category.short}
@@ -113,7 +114,7 @@ export default function OverviewFragment() {
                             component: (
                                 <TwoPartChip
                                     sx={{ margin: 0.5 }}
-                                    onClick={() => search(category.name)}
+                                    onClick={() => search(`kategorie:"${category.name}"`)}
                                     variant="outlined"
                                     size="small"
                                     primary={category.short}
@@ -147,7 +148,7 @@ export default function OverviewFragment() {
                         component: (
                             <TwoPartChip
                                 sx={{ margin: 0.5 }}
-                                onClick={() => search(author.name)}
+                                onClick={() => search(`autor:"${author.name}"`)}
                                 variant="outlined"
                                 size="small"
                                 primary={author.name}

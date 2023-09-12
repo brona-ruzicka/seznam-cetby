@@ -55,28 +55,54 @@ export default function SearchFragment() {
     const [ tab ] = useAutohideQueryParam("tab");
     const isFocused = !small || tab === "search";
 
-    const [ search, setSearch ] = useAutohideQueryParam("search");
     const [ sortStr, setSort ] = useCookie("sort");
-
     const sort: Sort = sorts.includes(sortStr as Sort) ? sortStr as Sort : sorts[0];
-    const cycleSort = () => setSort(sorts[(sorts.indexOf(sort) + 1) % sorts.length]);
+    const cycleSort = () => setSort(sorts[(sorts.indexOf(sort) + 1) % sorts.length])
 
+
+    const [ searchParam, setSearchParam ] = useAutohideQueryParam("search");
+    const [ searchText, setSearchText ] = React.useState(searchParam);
+    const searchOld = React.useRef(searchText);
+
+    const setSearch = React.useCallback(
+        (text: string) => {
+            setSearchText(text);
+            setSearchParam(text, true);
+            searchOld.current = text;
+        },
+        [setSearchText, setSearchParam, searchOld]
+    );
+
+    let search = "";
+    if (searchParam === searchText) {
+        search = searchText;
+    } else if (searchParam === searchOld.current) {
+        search = searchText;
+    } else {
+        search = searchParam;
+    }
 
     const searchIndex = React.useMemo<Readonly<{
         books: (readonly [ string, BookItem ])[],
+        published: (readonly [ string, BookItem ])[],
         authors: (readonly [ string, AuthorItem ])[],
         categories: (readonly [ string, CategoryItem ])[],
     }>>(() => {
         if (!database.loaded)
             return {
                 books: [],
+                published: [],
                 authors: [],
                 categories: [],
             };
 
         const books = Object.values(database.books).flatMap(book => [
             [normalize(book.name), book] as const,
-            ...( book.note ? [ [ normalize(book.note), book ] as const ] : [] )
+            ...( book.note ? [ [ normalize(book.note), book] as const ] : [] )
+        ]);
+
+        const published = Object.values(database.books).flatMap(book => [
+            [`${book.published}`, book] as const
         ]);
 
         const authors = Object.values(database.authors).flatMap(author => [
@@ -90,30 +116,84 @@ export default function SearchFragment() {
             [normalize(category.short), category] as const,
         ] as const);
 
+
         return {
             books,
+            published,
             authors,
             categories,
         };
     }, [ database ]);
 
     const matched = React.useMemo(() => {
-        const normalized = normalize(search);
-        const words = normalized.trim().split(/\s+/);
 
-        const matches = words.map(word => {
-            const books = [
-                ...searchIndex.books.filter(([query, _]) => query.includes(word)).map(([_, book]) => book),
-                ...searchIndex.authors.filter(([query, _]) => query.includes(word)).flatMap(([_, author]) => author.books),
-                ...searchIndex.categories.filter(([query, _]) => query.includes(word)).flatMap(([_, category]) => category.books),
-                ...((database.loaded && "selected selection vybrano vybrane vybrana vybrany vyber".includes(word) && selection.map(id => database.books[id])) || [])
-            ].reduce((red, val) => {
-                red[val.id] = val;
-                return red;
-            }, {} as Record<number, BookItem>);
+        const keywordStrings = search.match(/\\?.|^$/g)!.reduce((reducer, char) => {
+            if (char === '"') {
+                reducer.quote ^= 1;
+            } else if (!reducer.quote && char === ' '){
+                reducer.arr.push('');
+            } else {
+                reducer.arr[reducer.arr.length-1] += char.replace(/\\(.)/,"$1");
+            }
+            return reducer;
+        }, { arr: [''], quote: 0 }).arr
 
-            return books;
-        });
+        const matches = keywordStrings.flatMap(str => {
+            const word = str.split(/\s+/, 1)[0];
+            let category = "any";
+            let string = str;
+
+            if (word.includes(":")) {
+                const splitIndex = word.indexOf(":");
+                category = normalize(word.substring(0, splitIndex));
+                string = str.substring(splitIndex + 1);
+            }
+
+            const words = normalize(string).split(/\s+/);
+
+            const matches = words.map(word => {
+                switch (category) {
+                    case "kniha":
+                    case "book":
+                        return searchIndex.books.filter(([query, _]) => query.includes(word)).map(([_, book]) => book);
+                    case "vydano":
+                    case "published":
+                        return searchIndex.published.filter(([query, _]) => query.startsWith(word)).map(([_, book]) => book);
+                    case "autor":
+                    case "author":
+                        return searchIndex.authors.filter(([query, _]) => query.includes(word)).flatMap(([_, author]) => author.books)
+                    case "kategorie":
+                    case "category":
+                        return searchIndex.categories.filter(([query, _]) => query.includes(word)).flatMap(([_, category]) => category.books);
+                    case "vybrano":
+                    case "selected":
+                        if (!database.loaded) break;
+                        if ("ano yes".includes(word))
+                            return Object.values(database.books).filter(book => selection.includes(book.id));
+                        if ("ne no".includes(word))
+                            return Object.values(database.books).filter(book => !selection.includes(book.id));
+                        break;
+                    case "any":
+                        return [
+                            ...searchIndex.books.filter(([query, _]) => query.includes(word)).map(([_, book]) => book),
+                            ...searchIndex.published.filter(([query, _]) => query.includes(word)).map(([_, book]) => book),
+                            ...searchIndex.authors.filter(([query, _]) => query.includes(word)).flatMap(([_, author]) => author.books),
+                            ...searchIndex.categories.filter(([query, _]) => query.includes(word)).flatMap(([_, category]) => category.books)
+                        ]    
+                }
+                
+                return [];
+
+            }).map(books => books
+                .reduce((red, val) => {
+                    red[val.id] = val;
+                    return red;
+                }, {} as Record<number, BookItem>)
+            );
+
+            return matches;
+            
+        })
 
         return Object.values(database.books)
             .filter(book => matches.every(match => book.id in match))
@@ -180,7 +260,7 @@ export default function SearchFragment() {
                     autoFocus={isFocused}
                     fullWidth
                     value={search}
-                    onChange={e => setSearch(e.target.value, true)}
+                    onChange={e => setSearch(e.target.value)}
                     onKeyUp={e => {
                         if (e.code === "Enter") {
                             e.preventDefault();
@@ -353,7 +433,7 @@ const CustomListItemContent = (props: {
                     size="small"
                     variant="outlined"
                     label={category.short}
-                    onClick={() => search(category.name)}
+                    onClick={() => search(`kategorie:"${category.name}"`)}
                 />
             ))}
         </Stack>)}

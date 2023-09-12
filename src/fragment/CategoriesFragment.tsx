@@ -36,7 +36,7 @@ export default function CategoriesFragment() {
                             sx={{padding: 0}}
                         >
                             <ListItemButton
-                                onClick={() => search(category.name)}
+                                onClick={() => search(`kategorie:"${category.name}"`)}
                             >
                                 <ListItemText primary={category.name}/>
                             </ListItemButton>
