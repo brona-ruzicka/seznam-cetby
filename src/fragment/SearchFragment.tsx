@@ -366,7 +366,8 @@ const CustomListItemContent = (props: {
     const search = useSearch();
 
     const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"))
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"))
+    const isMediumScreen = useMediaQuery(theme.breakpoints.between("md","lg"))
 
     return (<>
         <ListItemButton
@@ -425,7 +426,7 @@ const CustomListItemContent = (props: {
                 </>)
             }
         />
-        {!isSmallScreen && (<Stack direction="row-reverse" spacing={1}>
+        {!isSmallScreen && (<Stack direction={isMediumScreen ? "column" : "row-reverse"} spacing={1}>
             {props.book.categories.map(category => (
                 <Chip
                     sx={{alignSelf: "end"}}

@@ -23,9 +23,11 @@ export default function HighLayout(props: {
     setActive: Consumer<string>,
 }) {
 
+    const { children: props_children, setActive: props_setActive } = props;
+
     const { special: { search, overview }, rest } = React.useMemo(
-        () => exportSpecialFragments(props.children, ["search", "overview"]),
-        [ props.children ]
+        () => exportSpecialFragments(props_children, ["search", "overview"]),
+        [ props_children ]
     );
 
 
@@ -48,19 +50,18 @@ export default function HighLayout(props: {
         index = silentIndex;
     }
 
-    
     const setIndex = React.useCallback((index: number) => {
         silentSetIndex(index, true);
-        props.setActive(rest[index].tag);
-    }, [ rest, props.setActive ]);
+        props_setActive(rest[index].tag);
+    }, [ rest, props_setActive, silentSetIndex ]);
 
     const setCollapsed = React.useCallback((collapsed: boolean) => {
         silentSetCollapsed(collapsed, true);
         if (collapsed)
-            props.setActive(rest[index].tag);
+            props_setActive(rest[index].tag);
         else
-            props.setActive("overview");
-    }, [ rest, props.setActive ]);
+            props_setActive("overview");
+    }, [ rest, index, props_setActive, silentSetCollapsed ]);
     
 
     return (
@@ -79,7 +80,7 @@ export default function HighLayout(props: {
                 sx={{ height: "100%" }}
             >
                 <Grid container spacing={2} sx={{ height: "100%" }}>
-                    <Grid item xs={6} md={8} sx={{ height: "100%" }}>
+                    <Grid item xs={6} lg={8} sx={{ height: "100%" }}>
                         <Card sx={{ width: "100%", height: "100%" }}>
                             <CardClickOverlay
                                 onClickCapture={() => props.setActive("search")}
@@ -88,7 +89,7 @@ export default function HighLayout(props: {
                             </CardClickOverlay>
                         </Card>
                     </Grid>
-                    <Grid item xs={6} md={4} sx={{ height: "100%" }}>
+                    <Grid item xs={6} lg={4} sx={{ height: "100%" }}>
                         <Stack spacing={2} sx={{ height: "100%" }}>
                             <Card sx={{ width: "100%", minHeight: (theme) => theme.spacing(20), flex: 1 }}>
                                 <CardClickOverlay

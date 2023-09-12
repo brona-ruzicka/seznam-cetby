@@ -87,7 +87,7 @@ export default function ExportDialog() {
             setDateOfIssueValue(value);
             setDateOfIssueCookie(value?.format("YYYY-MM-DD") ?? null, { expires: 7 });
         },
-        [setDateOfIssueValue, setDateOfIssueValue]
+        [setDateOfIssueValue, setDateOfIssueCookie]
     );
 
     const [ pronouncement, setPronouncement ] = useCookie("pronouncement");

@@ -20,9 +20,11 @@ export default function LowLayout(props: {
     setActive: Consumer<string>,
 }) {
     
+    const { children: props_children, setActive: props_setActive } = props;
+
     const { special: { search }, rest } = React.useMemo(
-        () => exportSpecialFragments(props.children, [ "search" ]),
-        [ props.children]
+        () => exportSpecialFragments(props_children, [ "search" ]),
+        [ props_children ]
     );
 
     const [ silentIndex, silentSetIndex ] = useSilentState(0);
@@ -37,8 +39,8 @@ export default function LowLayout(props: {
 
     const setIndex = React.useCallback((index: number) => {
         silentSetIndex(index, true);
-        props.setActive(rest[index].tag);
-    }, [ props.children, props.setActive ]);
+        props_setActive(rest[index].tag);
+    }, [ rest, props_setActive, silentSetIndex ]);
 
 
 
@@ -58,7 +60,7 @@ export default function LowLayout(props: {
                 sx={{ height: "100%" }}
             >
                 <Grid container spacing={2} sx={{ height: "100%" }}>
-                    <Grid item xs={6} md={8} sx={{ height: "100%" }}>
+                    <Grid item xs={6} lg={8} sx={{ height: "100%" }}>
                         <Card sx={{ width: "100%", height: "100%" }}>
                             <CardClickOverlay
                                 onClickCapture={() => props.setActive("search")}
@@ -67,7 +69,7 @@ export default function LowLayout(props: {
                             </CardClickOverlay>
                         </Card>
                     </Grid>
-                    <Grid item xs={6} md={4} sx={{ height: "100%" }}>
+                    <Grid item xs={6} lg={4} sx={{ height: "100%" }}>
                         <Card sx={{ width: "100%", height: "100%" }}>
                             <CardClickOverlay
                                 onClickCapture={() => props.setActive(rest[silentIndex].tag)}

@@ -36,6 +36,15 @@ export default function useThemeCreator() {
                 mode: prefersDarkMode ? "dark" : "light",
                 ...(prefersDarkMode ? darkThemeTokens : lightThemeTokens),
             },
+            breakpoints: {
+                values: {
+                    xs: 0,
+                    sm: 600,
+                    md: 900,
+                    lg: 1050,
+                    xl: 1536,
+                },
+            }
         },
         materialCs,
         dateCs
