@@ -26,7 +26,7 @@ export default function BooksFragment() {
     const books = selection
         .map(id => database.books[id])
         .map(book => ({ book, text: `${book.authors.length ? (book.authors.map(author => author.short).join(", ") + ": ") : ""}${book.name}`}))
-        .sort((a,b) => a.text.localeCompare(b.text));
+        .sort((a,b) => a.text.localeCompare(b.text, "cst"));
 
     return (
         <>

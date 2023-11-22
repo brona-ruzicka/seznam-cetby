@@ -226,38 +226,38 @@ export default function SearchFragment() {
         switch (sort) {
             case "book_asc":
                 sortingFun = (a,b) =>
-                    a.name.localeCompare(b.name) ||
+                    a.name.localeCompare(b.name, "cs") ||
                     a.published - b.published;
                 break;
 
             case "book_desc":
                 sortingFun = (a,b) =>
-                    b.name.localeCompare(a.name) || 
+                    b.name.localeCompare(a.name, "cs") || 
                     a.published - b.published;
                 break;
 
             case "year_asc":
                 sortingFun = (a,b)=> 
                     (a.published - b.published) ||
-                    a.name.localeCompare(b.name);
+                    a.name.localeCompare(b.name, "cs");
                 break;
 
             case "year_desc":
                 sortingFun = (a,b) => 
                     (b.published - a.published) ||
-                    a.name.localeCompare(b.name);
+                    a.name.localeCompare(b.name, "cs");
                 break;
 
             case "author_asc":
                 sortingFun = (a,b) => 
-                    ((a.authors[0]?.short ?? "").localeCompare(b.authors[0]?.short ?? "")) ||
-                    a.name.localeCompare(b.name);
+                    ((a.authors[0]?.short ?? "").localeCompare(b.authors[0]?.short ?? "", "cs")) ||
+                    a.name.localeCompare(b.name, "cs");
                 break;
 
             case "author_desc":
                 sortingFun = (a,b) =>
-                    ((b.authors[0]?.short ?? "").localeCompare(a.authors[0]?.short ?? "")) ||
-                    a.name.localeCompare(b.name);;
+                    ((b.authors[0]?.short ?? "").localeCompare(a.authors[0]?.short ?? "", "cs")) ||
+                    a.name.localeCompare(b.name, "cs");
                 break;
 
         }

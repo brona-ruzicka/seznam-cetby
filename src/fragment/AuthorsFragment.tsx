@@ -27,7 +27,7 @@ export default function AuthorsFragment() {
     const authors = Object.entries(counts.authors)
         .filter(([_, count]) => count > 0)
         .map(([id, count]) => [ database.authors[id as any], count ] as const)
-        .sort(([a, _], [b, __]) => a.short.localeCompare(b.short));
+        .sort(([a, _], [b, __]) => a.short.localeCompare(b.short, "cs"));
 
     return (
         <>

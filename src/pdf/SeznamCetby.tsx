@@ -40,7 +40,7 @@ export default function SeznamCetby(props: {
 
         const sorted = props.books.sort((a,b) => 
             Math.min(...a.authors.map(ax => authors[ax.id]), a.published) -  Math.min(...b.authors.map(bx => authors[bx.id]), b.published) ||
-            (a.authors[0]?.short ?? "").localeCompare(b.authors[0]?.short ?? "") ||
+            (a.authors[0]?.short ?? "").localeCompare(b.authors[0]?.short ?? "", "cs") ||
             (a.published) - (b.published)
         )
 
