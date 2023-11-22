@@ -35,8 +35,6 @@ import useDatabase from "../database/useDatabase";
 import ReactPDF, { pdf } from "@react-pdf/renderer";
 
 
-const CLASSES = [ "Oktáva", "4. AJ", "4. B", "4. E", "4. I" ];
-
 
 export default function ExportDialog() {
 
@@ -95,7 +93,8 @@ export default function ExportDialog() {
 
     const selection = useSelection();
     const database = useDatabase();
-    const books = React.useMemo(() => database.loaded ? selection.map(id => database.books[id]) : [], [ selection, database]);
+    const books = React.useMemo(() => database.loaded ? selection.map(id => database.books[id]) : [], [ selection, database ]);
+    const classNames = React.useMemo(() => database.loaded ? database.extra.classNames : [], [ database ]);
 
     
     return (
@@ -129,7 +128,7 @@ export default function ExportDialog() {
                                 <Autocomplete
                                     freeSolo
                                     openOnFocus
-                                    options={CLASSES}
+                                    options={classNames}
                                     inputValue={personClass ?? ""}
                                     onInputChange={(_,value) => setPersonClass(value)}
                                     renderInput={(params) => <TextField {...params} label="Třída" />}

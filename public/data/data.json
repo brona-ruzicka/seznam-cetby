@@ -2081,6 +2081,7 @@
   ],
   "extra": {
     "authorLimit": { "max": 2 },
-    "bookLimit": { "min": 20 }
+    "bookLimit": { "min": 20 },
+    "classNames": [ "Oktáva", "4. B", "4. I", "4. L" ]
   }
 }
