@@ -2081,7 +2081,7 @@
   ],
   "extra": {
     "authorLimit": { "max": 2 },
-    "bookLimit": { "min": 20 },
+    "bookLimit": { "min": 20, "max": 20 },
     "classNames": [ "Oktáva", "4. B", "4. I", "4. L" ],
     "listName": "Seznam literatury pro\u00a0Oktávu\u00a0a\u00a04.\u00a0ročníky"
   }

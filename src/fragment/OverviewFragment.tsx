@@ -42,9 +42,10 @@ export default function OverviewFragment() {
         const listName = database.extra.listName;
         const listAlert = listName ? (<ListName title={listName}/>) : undefined;
 
-        const totalRequired = database.extra.bookLimit.min;
-        const totalUnder = totalRequired && counts.total < totalRequired;
-        const totalOver = totalRequired && counts.total > totalRequired;
+        const totalRequiredMin = database.extra.bookLimit.min;
+        const totalRequiredMax = database.extra.bookLimit.max;
+        const totalUnder = totalRequiredMin && counts.total < totalRequiredMin;
+        const totalOver = totalRequiredMax && counts.total > totalRequiredMax;
 
         const totalAlert = (
             <AutoCollapseInformationAlert
@@ -64,7 +65,7 @@ export default function OverviewFragment() {
                             variant="outlined"
                             size="small"
                             primary={"Počet děl"}
-                            secondary={`${counts.total} / ${totalRequired}`}
+                            secondary={`${counts.total} / ${totalUnder ? totalRequiredMin : totalRequiredMax}`}
                         /> 
                     )
                 }]}
