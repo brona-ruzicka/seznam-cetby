@@ -185,11 +185,9 @@ export default function SearchFragment() {
                     case "selected":
                     case "sel":
                         if (!database.loaded) break;
-                        if ("ano yes".includes(word))
-                            return Object.values(database.books).filter(book => selection.includes(book.id));
-                        if ("ne no".includes(word))
+                        if (word.trim() === "ne" || word.trim() === "no")
                             return Object.values(database.books).filter(book => !selection.includes(book.id));
-                        break;
+                        return Object.values(database.books).filter(book => selection.includes(book.id));
                     default:
                         return [
                             ...searchIndex.books.filter(([query, _]) => query.includes(word)).map(([_, book]) => book),
