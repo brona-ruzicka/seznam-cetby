@@ -38,7 +38,8 @@ type LimitData = Readonly<{
 type Extra = Readonly<{
     authorLimit: LimitData
     bookLimit: LimitData
-    classNames: ReadonlyArray<string>
+    classNames: ReadonlyArray<string> | undefined | null
+    listName: string | undefined | null
 }>
 
 type Data = Readonly<{

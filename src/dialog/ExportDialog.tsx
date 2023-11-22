@@ -94,7 +94,7 @@ export default function ExportDialog() {
     const selection = useSelection();
     const database = useDatabase();
     const books = React.useMemo(() => database.loaded ? selection.map(id => database.books[id]) : [], [ selection, database ]);
-    const classNames = React.useMemo(() => database.loaded ? database.extra.classNames : [], [ database ]);
+    const classNames = React.useMemo(() => database.loaded ? database.extra.classNames ?? [] : [], [ database ]);
 
     
     return (

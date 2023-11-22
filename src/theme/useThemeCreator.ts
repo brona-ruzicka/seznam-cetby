@@ -21,6 +21,11 @@ const darkThemeTokens = {
     divider: "rgba(255, 255, 255, 0.7)",
     primary: {
         main: colors.blue[600],
+    },
+    info: {
+        light: colors.blue[600], 
+        main: colors.blue[600],
+        dark:  colors.blue[600],
     }
 }
 

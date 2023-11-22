@@ -8,6 +8,8 @@ import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 
 
 import CollapseAlert from "../component/CollapseAlert";
@@ -37,12 +39,15 @@ export default function OverviewFragment() {
 
     if (database.loaded) {
 
+        const listName = database.extra.listName;
+        const listAlert = listName ? (<ListName title={listName}/>) : undefined;
+
         const totalRequired = database.extra.bookLimit.min;
         const totalUnder = totalRequired && counts.total < totalRequired;
         const totalOver = totalRequired && counts.total > totalRequired;
 
         const totalAlert = (
-            <InformationAlert
+            <AutoCollapseInformationAlert
                 status={totalUnder ? "error" : totalOver ? "warning" : "success"}
                 title="Počet děl"
                 description={
@@ -78,7 +83,7 @@ export default function OverviewFragment() {
         
         const categoryAlerts = (
             <>
-                <InformationAlert
+                <AutoCollapseInformationAlert
                     status={categoryEraProblems.length ? "error" : "success"}
                     title="Časová období"
                     description={categoryEraProblems.length
@@ -101,7 +106,7 @@ export default function OverviewFragment() {
                         }))
                     }
                 />
-                <InformationAlert
+                <AutoCollapseInformationAlert
                     status={categoryFormProblems.length ? "error" : "success"}
                     title="Typy děl"
                     description={categoryFormProblems.length
@@ -135,7 +140,7 @@ export default function OverviewFragment() {
             .filter(([_, count]) => authorRequired && count > authorRequired );
 
         const authorAlert = (
-            <InformationAlert
+            <AutoCollapseInformationAlert
                 status={authorProblems.length ? "error" : "success"}
                 title="Autoři"
                 description={authorProblems.length
@@ -164,6 +169,7 @@ export default function OverviewFragment() {
 
         alerts = (
             <>
+                {listAlert}
                 {totalAlert}
                 {categoryAlerts}
                 {authorAlert}
@@ -221,18 +227,37 @@ export default function OverviewFragment() {
     )
 }
 
-const InformationAlert = (props: {
-    status: "success" | "warning" | "error",
+const AutoCollapseInformationAlert = (props: {
+    status: "success" | "warning" | "error" | "info",
     title?: React.ReactNode | undefined,
     description?: React.ReactNode | undefined,
     list?: { key: React.Key, component: React.ReactNode }[] | undefined
 }) => {
 
     const collapsed = useAutoCollapse();
+
+    return (
+        <CollapseInformationAlert
+            in={!collapsed}
+            {...props}
+        />
+    );
+
+}
+
+
+const CollapseInformationAlert = (props: {
+    status: "success" | "warning" | "error" | "info",
+    title?: React.ReactNode | undefined,
+    description?: React.ReactNode | undefined,
+    list?: { key: React.Key, component: React.ReactNode }[] | undefined
+    in?: boolean | undefined
+}) => {
+
     const theme = useTheme();
 
     return (<CollapseAlert
-        in={!collapsed}
+        in={props.in}
         variant={theme.palette.mode === "light" ? "standard" : "outlined"}
         severity={props.status}
         title={props.title}
@@ -251,4 +276,24 @@ const InformationAlert = (props: {
         )}   
     </CollapseAlert>);
 
+}
+
+const ListName = (props: {
+    title: string
+}) => {
+
+    const theme = useTheme();
+
+    return (
+        <Alert
+            severity="info"
+            variant={theme.palette.mode === "light" ? "standard" : "outlined"}
+        >
+            <AlertTitle
+                sx={{ marginBottom: -1/4 }}
+            >
+                { props.title }
+            </AlertTitle>
+        </Alert>
+    )
 }
