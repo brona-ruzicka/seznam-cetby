@@ -24,6 +24,6 @@ Veškerá konfigurace se provádí v `data/data.json`.
 
 - Je potřeba nainstalovat nástroj [npm](https://www.npmjs.com/package/npm)
 - Stáhnout závislosti `npm i`
-- Buildnout projekt `npm run build`
+- Buildnout projekt `npm run build`, trvá to pár minut
 - Výsledné soubory se budou nacházet v adresáři `./build`
 - Ty stačí pak pouze staticky hostovat
